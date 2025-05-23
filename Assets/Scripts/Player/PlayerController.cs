@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform bulletSpawnPoint;
 
+    private float nextFireTime;
+
 
     void Awake()
     {
@@ -37,9 +39,10 @@ public class PlayerController : MonoBehaviour
             transform.Translate(horizontalMovement);
             transform.Rotate(horizontalRotationMovement);
 
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButton("Fire1") && Time.time > nextFireTime)
             {
                 ShootBullet();
+                nextFireTime = Time.time + playerStates.FireRate;
             }
 
         }
