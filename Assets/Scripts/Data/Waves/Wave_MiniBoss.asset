@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0551d672977e9a14fb051537ceff7ef7, type: 3}
   m_Name: Wave_MiniBoss
   m_EditorClassIdentifier: 
-  enemyPrefabs: []
+  enemyPrefabs:
+  - {fileID: 0}
   count: 10
   spawnInterval: 1

@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baa86260f6db08840833985b065374db, type: 3}
   m_Name: Level_01
   m_EditorClassIdentifier: 
-  waves: []
-  miniBossWave: {fileID: 0}
-  finalBossWave: {fileID: 0}
+  waves:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  miniBossWave: {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
+  finalBossWave: {fileID: 11400000, guid: 04272a8ba349a2048b896af648bbd8d3, type: 2}
   miniBossEveryXLevels: 3
