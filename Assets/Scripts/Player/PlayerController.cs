@@ -2,9 +2,17 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Player States")]
+    private PlayerStates playerStates;
+
+    [Header("Movement Properties")]
     [SerializeField] private float movementSpeed = 10f;
     [SerializeField] private float rotationSpeed = 50f;
-    private PlayerStates playerStates;
+
+    [Header("Shoot Properties")]
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform bulletSpawnPoint;
+
 
     void Awake()
     {
@@ -13,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        // Inputs
+        // [Movement and Rotation]
         float verticalInput = Input.GetAxis("Vertical Movement");
         float horizontalInput = Input.GetAxis("Horizontal Movement");
         float horizontalRotation = Input.GetAxis("Horizontal Rotation");
@@ -26,6 +36,17 @@ public class PlayerController : MonoBehaviour
             transform.Translate(verticalMovement);
             transform.Translate(horizontalMovement);
             transform.Rotate(horizontalRotationMovement);
+
+            if (Input.GetButtonDown("Fire1"))
+            {
+                ShootBullet();
+            }
+
         }
+    }
+
+    private void ShootBullet()
+    {
+        Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
     }
 }
