@@ -18,4 +18,9 @@ public class NextLevelButton : MonoBehaviour
             Debug.Log("This is the last level!");
         }
     }
+
+    public void DefeatLevel()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
