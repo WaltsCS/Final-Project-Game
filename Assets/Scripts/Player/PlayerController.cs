@@ -2,9 +2,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("Player States")]
-    private PlayerStates playerStates;
-
     [Header("Movement Properties")]
     [SerializeField] private float movementSpeed = 10f;
     [SerializeField] private float rotationSpeed = 50f;
@@ -13,38 +10,47 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform bulletSpawnPoint;
 
+    private Rigidbody rb;
+    private PlayerStates playerStates;
     private float nextFireTime;
 
 
     void Awake()
     {
         playerStates = GetComponent<PlayerStates>();
+        rb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
-        // Inputs
-        // [Movement and Rotation]
+        if (playerStates.IsAlive && Input.GetButton("Fire1") && Time.time > nextFireTime)
+        {
+            ShootBullet();
+            nextFireTime = Time.time + playerStates.FireRate;
+        }
+    }
+
+    void FixedUpdate()
+    {
+        if (!playerStates.IsAlive) return;
+
+        // Get inputs
         float verticalInput = Input.GetAxis("Vertical Movement");
         float horizontalInput = Input.GetAxis("Horizontal Movement");
         float horizontalRotation = Input.GetAxis("Horizontal Rotation");
 
-        Vector3 verticalMovement = movementSpeed * verticalInput * Time.deltaTime * Vector3.forward;
-        Vector3 horizontalMovement = movementSpeed * horizontalInput * Time.deltaTime * Vector3.right;
-        Vector3 horizontalRotationMovement = rotationSpeed * horizontalRotation * Time.deltaTime * Vector3.up;
+        Vector3 movement = (transform.forward * verticalInput + transform.right * horizontalInput) * movementSpeed * Time.fixedDeltaTime;
 
-        if (playerStates.IsAlive)
+        // Apply movement using Rigidbody
+        Vector3 newPosition = rb.position + movement;
+        rb.MovePosition(newPosition);
+
+        // Apply rotation using Rigidbody
+        if (Mathf.Abs(horizontalRotation) > 0.1f)
         {
-            transform.Translate(verticalMovement);
-            transform.Translate(horizontalMovement);
-            transform.Rotate(horizontalRotationMovement);
-
-            if (Input.GetButton("Fire1") && Time.time > nextFireTime)
-            {
-                ShootBullet();
-                nextFireTime = Time.time + playerStates.FireRate;
-            }
-
+            float rotationAmount = horizontalRotation * rotationSpeed * Time.fixedDeltaTime;
+            Quaternion deltaRotation = Quaternion.Euler(0, rotationAmount, 0);
+            rb.MoveRotation(rb.rotation * deltaRotation);
         }
     }
 
