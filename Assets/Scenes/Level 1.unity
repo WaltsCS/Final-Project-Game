@@ -1492,7 +1492,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 612179966}
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 5, z: -2.5}
+  rotationEulerOffset: {x: 5, y: 0, z: 0}
   smoothSpeed: 20
 --- !u!4 &1553308855
 Transform:
@@ -2053,3 +2054,5 @@ SceneRoots:
   - {fileID: 546031351}
   - {fileID: 2045877269}
   - {fileID: 1553308855}
+  - {fileID: 342649280}
+  - {fileID: 507643790}
