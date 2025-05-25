@@ -823,7 +823,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612179956}
   serializedVersion: 4
-  m_Mass: 10
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -840,7 +840,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 2
 --- !u!114 &612179962
 MonoBehaviour:
@@ -2053,3 +2053,5 @@ SceneRoots:
   - {fileID: 546031351}
   - {fileID: 2045877269}
   - {fileID: 1553308855}
+  - {fileID: 342649280}
+  - {fileID: 507643790}
