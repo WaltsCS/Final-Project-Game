@@ -4,8 +4,9 @@ public class PlayerBullet : MonoBehaviour
 {
     [Header("Bullet Properties")]
     [SerializeField] private float speed = 20f;
+    [SerializeField] private float damage = 10f;
     // todo: change lifetime
-    // todo: when bullet hits wall, destroy it
+    // todo: when bullet hits wall/minion/boss, destroy it
     [SerializeField] private float lifetime = 3f;
 
     // todo: add particle effects
@@ -36,8 +37,9 @@ public class PlayerBullet : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter(Collision other)
     {
+        Debug.Log($"Bullet collided with: {other.gameObject.name}");
         // todo: when bullet hits
         DestroyBullet();
     }
