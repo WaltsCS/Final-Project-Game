@@ -6,7 +6,7 @@ public class WaveSpawner : MonoBehaviour        ///For each spawnPoint empty gam
 {
     [Tooltip("Point this spawner at the same LevelData list your LevelManager uses.")]
     public List<WaveData> waves;
-    private int waveIndex = 0;      ///purely internal variable, Logs say "unused" to keep absolute control of spawners
+    private int waveIndex = 1;      ///purely internal variable, Logs say "unused" to keep absolute control of spawners
 
     public static readonly List<WaveSpawner> Instances = new List<WaveSpawner>();   ///have each spawner announce itself:
     private void OnEnable()

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wave_Easy1
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 0}
-  - {fileID: 0}
-  count: 10
+  - {fileID: 8648902085773784809, guid: f5bd20bbe4768e64ab53ebe2c9cd7618, type: 3}
+  - {fileID: 8648902085773784809, guid: f5bd20bbe4768e64ab53ebe2c9cd7618, type: 3}
+  count: 2
   spawnInterval: 1
