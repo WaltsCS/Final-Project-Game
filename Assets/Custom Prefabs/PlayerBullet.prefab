@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3500686674910181380}
   - component: {fileID: -9207802664149778402}
   - component: {fileID: -7718792730521523042}
-  - component: {fileID: -1994458552293597149}
+  - component: {fileID: -5072675149681054924}
   m_Layer: 7
   m_Name: PlayerBullet
   m_TagString: Untagged
@@ -211,9 +211,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02b8c4864a1e2164faf6453923777e4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  timeToLive: 3
   damage: 10
-  lifetime: 3
   hitEffectPrefab: {fileID: 0}
 --- !u!136 &-7718792730521523042
 CapsuleCollider:
@@ -235,10 +234,10 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 3.2050993
-  m_Height: 58.82997
+  m_Height: 59.069496
   m_Direction: 2
-  m_Center: {x: 0, y: 0.50388986, z: 24.363564}
---- !u!54 &-1994458552293597149
+  m_Center: {x: 0, y: 0.50388986, z: 24.323763}
+--- !u!54 &-5072675149681054924
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -260,8 +259,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
