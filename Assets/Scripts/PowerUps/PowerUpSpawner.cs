@@ -62,17 +62,12 @@ public class PowerUpSpawner : MonoBehaviour
 
         }
 
-        // Determine how many targets to spawn based on the number of available spawn points
+        // Select one random spawn point
         List<int> selectedSpawnPointIndices = new List<int>();
-        for (int i = 0; i < availableSpawnPoints.Count; i++)
+        if (availableSpawnPoints.Count > 0)
         {
-            if (availableSpawnPoints.Count == 0) break;
-
             int randomIndex = Random.Range(0, availableSpawnPoints.Count);
-            int spawnPointIndex = availableSpawnPoints[randomIndex];
-            selectedSpawnPointIndices.Add(spawnPointIndex);
-            availableSpawnPoints.RemoveAt(randomIndex);
-
+            selectedSpawnPointIndices.Add(availableSpawnPoints[randomIndex]);
         }
 
         foreach (int spawnPointIndex in selectedSpawnPointIndices)

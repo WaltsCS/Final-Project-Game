@@ -48,11 +48,11 @@ public class PowerUpController : MonoBehaviour
         PlayerStates playerStates = other.gameObject.GetComponent<PlayerStates>();
         if (other.gameObject.CompareTag("Player") && playerStates != null)
         {
-            if (gameObject.CompareTag("FireRatePowerUp"))
+            if (gameObject.CompareTag("PowerUpFireRate"))
             {
                 playerStates.IncreaseFireRate.Invoke();
             }
-            else if (gameObject.CompareTag("HealthPowerUp"))
+            else if (gameObject.CompareTag("PowerUpHealth"))
             {
                 playerStates.ReplenishHealth.Invoke();
             }

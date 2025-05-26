@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ac1c137835eb67946ade56c36bbf5f94, type: 3}
       propertyPath: m_TagString
-      value: FireRatePowerUp
+      value: PowerUpFireRate
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0523e4093a7032e47b6ac736976fe62a, type: 3}
       propertyPath: m_TagString
-      value: HealthPowerUp
+      value: PowerUpHealth
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
