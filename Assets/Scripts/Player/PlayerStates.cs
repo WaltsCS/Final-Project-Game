@@ -32,5 +32,7 @@ public class PlayerStates : MonoBehaviour
     public Action Shoot;
     public Action TakeDamage;
     public Action Die;
+    public Action IncreaseFireRate;
+    public Action ReplenishHealth;
 
 }
