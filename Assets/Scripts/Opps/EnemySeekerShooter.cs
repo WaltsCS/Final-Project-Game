@@ -9,13 +9,13 @@ public class EnemySeekerShooter : MonoBehaviour
 
     [Header("Shooting")]
     [Tooltip("Projectile prefab to fire (must have a Rigidbody and EnemyBullet.cs on it)")]
-    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] protected GameObject projectilePrefab;
     [Tooltip("Speed of the fired projectile")]
-    [SerializeField] private float projectileSpeed = 10f;
+    [SerializeField] protected float projectileSpeed = 10f;
     [Tooltip("Time between shots")]
     [SerializeField] private float shootInterval = 2f;
     [Tooltip("Local point to spawn projectiles (optional)")]
-    [SerializeField] private Transform shootPoint;
+    [SerializeField] protected Transform shootPoint;
 
     private Transform player;
     private float shootTimer;
@@ -60,7 +60,7 @@ public class EnemySeekerShooter : MonoBehaviour
         rb.MovePosition(rb.position + moveDelta);
     }
 
-    private void Shoot(Vector3 direction)
+    protected virtual void Shoot(Vector3 direction)
     {
         // 1) Compute a horizontal-only direction
         Vector3 toPlayer = player.position - transform.position;
