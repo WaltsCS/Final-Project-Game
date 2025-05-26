@@ -3963,6 +3963,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 508774651004137241, guid: d3aefd70c6105894ba136d05fa0f519d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2233381523178666459, guid: d3aefd70c6105894ba136d05fa0f519d, type: 3}
+      propertyPath: shootInterval
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711772442109652065, guid: d3aefd70c6105894ba136d05fa0f519d, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711772442109652065, guid: d3aefd70c6105894ba136d05fa0f519d, type: 3}
+      propertyPath: m_Constraints
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711772442109652065, guid: d3aefd70c6105894ba136d05fa0f519d, type: 3}
+      propertyPath: m_ImplicitCom
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4324646129947242602, guid: d3aefd70c6105894ba136d05fa0f519d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

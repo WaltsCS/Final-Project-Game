@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4324646129947242602}
   - component: {fileID: 1799219260294284549}
   - component: {fileID: 8047317004140817170}
+  - component: {fileID: 3711772442109652065}
   m_Layer: 0
   m_Name: MiniBossWithPathfinding
   m_TagString: Untagged
@@ -69,6 +70,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+--- !u!54 &3711772442109652065
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7367769260169965889}
+  serializedVersion: 4
+  m_Mass: 0.0000001
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 100
+  m_CollisionDetection: 0
 --- !u!1001 &65464734128684803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -121,7 +149,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniBoss
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4504497231733499348, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
