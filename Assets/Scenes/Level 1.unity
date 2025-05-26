@@ -415,7 +415,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &342649279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -922,7 +922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &507643789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1311,6 +1311,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf07c7b5945707044b696065838ec91b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &612179972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612179956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53e3c442f86d61445a7598af62b1946f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireRateIncreaseDuration: 5
+  fireRateValue: 0.05
 --- !u!4 &615484513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1634862204795693691, guid: 0a4df1c971f7c9343a0752ddeea295a7, type: 3}
@@ -2424,8 +2438,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerUpPrefabs:
-  - {fileID: 797301889827987112, guid: cccaf31719305c84692cc47eb0cf9dc6, type: 3}
-  - {fileID: 797301889827987112, guid: 76e5c84d9518f0645b777d9e1dfdaddd, type: 3}
+  - {fileID: 936233328414517419, guid: 951c2962b6530df4c826fba1d6d4f0f4, type: 3}
+  - {fileID: 5056146153673318603, guid: 9c67a9ceca776a94a9805f51c70c018c, type: 3}
   spawnPoints:
   - {fileID: 1459832791}
   - {fileID: 715389603}
@@ -2720,6 +2734,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9622e8ee952bc514ab768c2e1a430c33, type: 3}
       insertIndex: -1
       addedObject: {fileID: 612179969}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9622e8ee952bc514ab768c2e1a430c33, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 612179972}
   m_SourcePrefab: {fileID: 100100000, guid: 9622e8ee952bc514ab768c2e1a430c33, type: 3}
 --- !u!1 &1619198074
 GameObject:
