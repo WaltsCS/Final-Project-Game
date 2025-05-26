@@ -17,11 +17,19 @@ public class EnemySeekerShooter : MonoBehaviour
     [Tooltip("Local point to spawn projectiles (optional)")]
     [SerializeField] private Transform shootPoint;
 
+    [Header("Obstacle Avoidance")]
+    [Tooltip("Tag of obstacles to avoid")]
+    [SerializeField] private string obstacleTag = "Obstacle";
+    [Tooltip("How strongly the enemy avoids obstacles")]
+    [SerializeField] private float avoidanceStrength = 5f;
+    [Tooltip("How far ahead to check for obstacles")]
+    [SerializeField] private float avoidanceRayDistance = 2f;
+
     private Transform player;
     private float shootTimer;
     private Rigidbody rb;
 
-    void Awake()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindWithTag("Player")?.transform;
@@ -29,7 +37,7 @@ public class EnemySeekerShooter : MonoBehaviour
             Debug.LogError("[EnemySeekerShooter] No Player found in scene with tag 'Player'.");
     }
 
-    void Update()
+    private void Update()
     {
         if (player == null) return;
 
@@ -50,7 +58,7 @@ public class EnemySeekerShooter : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (player == null) return;
 
