@@ -1,33 +1,56 @@
 using UnityEngine;
-using UnityEngine.AI;
 
-public class EnemyMiniBossShooter : EnemySeekerShooter
+public class EnemyMiniBossShooter : MonoBehaviour
 {
-    [Header("Mini Boss Shooting")]
-    [Tooltip("Angle in degrees for the side shots relative to the center direction")]
+    [Header("Shooting")]
+    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private float projectileSpeed = 10f;
+    [SerializeField] private float shootInterval = 2f;
     [SerializeField] private float sideShotAngle = 30f;
-
     [SerializeField] private Transform centerShootPoint;
     [SerializeField] private Transform leftShootPoint;
     [SerializeField] private Transform rightShootPoint;
 
-    private NavMeshAgent agent;
+    private Transform player;
+    private float shootTimer;
 
-    protected override void Awake()
+    private void Awake()
     {
-        base.Awake();
-        agent = GetComponent<NavMeshAgent>();
+        player = GameObject.FindWithTag("Player")?.transform;
+        if (player == null)
+            Debug.LogError("[EnemyMiniBossShooter] No Player found in scene with tag 'Player'.");
     }
 
-    protected override void FixedUpdate(){}
-
-    protected override void Shoot(Vector3 direction)
+    private void Update()
     {
-        // Center shot
+        if (player == null) return;
+
+        // Rotate toward player
+        Vector3 toPlayer = player.position - transform.position;
+        toPlayer.y = 0;
+        if (toPlayer.sqrMagnitude > 0.001f)
+        {
+            Quaternion targetRot = Quaternion.LookRotation(toPlayer, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, 5f * Time.deltaTime);
+        }
+
+        // Shooting logic
+        shootTimer -= Time.deltaTime;
+        if (shootTimer <= 0f)
+        {
+            Shoot(toPlayer.normalized);
+            shootTimer = shootInterval;
+        }
+    }
+
+    private void Shoot(Vector3 direction)
+    {
         ShootSingle(direction, centerShootPoint != null ? centerShootPoint.position : transform.position);
 
-        // Calculate side directions
-        Vector3 toPlayer = direction; toPlayer.y = 0; toPlayer.Normalize();
+        Vector3 toPlayer = direction;
+        toPlayer.y = 0;
+        toPlayer.Normalize();
+
         Vector3 leftDir = Quaternion.Euler(0, -sideShotAngle, 0) * toPlayer;
         Vector3 rightDir = Quaternion.Euler(0, sideShotAngle, 0) * toPlayer;
 
@@ -46,29 +69,4 @@ public class EnemyMiniBossShooter : EnemySeekerShooter
         if (prb != null)
             prb.linearVelocity = dir * projectileSpeed;
     }
-
-    protected override void Update()
-    {
-        if (player == null) return;
-
-        // Set the agent's destination to the player's position
-        agent.SetDestination(player.position);
-
-        // Face the player when shooting
-        Vector3 toPlayer = player.position - transform.position;
-        toPlayer.y = 0;
-        if (toPlayer.sqrMagnitude > 0.001f)
-        {
-            Quaternion targetRot = Quaternion.LookRotation(toPlayer, Vector3.up);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, 5f * Time.deltaTime);
-        }
-
-        // Shoot on interval
-        shootTimer -= Time.deltaTime;
-        if (shootTimer <= 0f)
-        {
-            Shoot(toPlayer.normalized);
-            shootTimer = shootInterval;
-        }
-    }
-} 
+}
