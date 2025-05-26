@@ -5,6 +5,7 @@ public class PlayerStates : MonoBehaviour
 {
     private bool isAlive = true;
     private float fireRate = 0.2f;
+    private int healthBars = 3;
 
 
     public bool IsAlive
@@ -19,7 +20,17 @@ public class PlayerStates : MonoBehaviour
         set { fireRate = value; }
     }
 
+    public int HealthBars
+    {
+        get { return healthBars; }
+        set
+        {
+            healthBars = value;
+        }
+    }
+
     public Action Shoot;
+    public Action TakeDamage;
     public Action Die;
 
 }

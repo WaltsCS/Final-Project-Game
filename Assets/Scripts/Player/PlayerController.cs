@@ -24,21 +24,11 @@ public class PlayerController : MonoBehaviour
     private void OnEnable()
     {
         playerStates.Shoot += ShootBullet;
-        playerStates.Die += Die;
     }
 
     private void OnDisable()
     {
         playerStates.Shoot -= ShootBullet;
-        playerStates.Die -= Die;
-    }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            playerStates.Die.Invoke();
-        }
     }
 
     void Update()
@@ -72,12 +62,6 @@ public class PlayerController : MonoBehaviour
             Quaternion deltaRotation = Quaternion.Euler(0, rotationAmount, 0);
             rb.MoveRotation(rb.rotation * deltaRotation);
         }
-    }
-
-    private void Die()
-    {
-        playerStates.IsAlive = false;
-        GameObject.Find("GameManager").GetComponent<GameManager>().DisplayGameOver();
     }
 
     private void ShootBullet()
