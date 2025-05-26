@@ -80,7 +80,6 @@ public class PowerUpSpawner : MonoBehaviour
 
         foreach (int spawnPointIndex in selectedSpawnPointIndices)
         {
-            // todo: add offset if necessary
             Vector3 spawnPosition = spawnPoints[spawnPointIndex].position;
 
             // Instantiate a random power-up prefab
