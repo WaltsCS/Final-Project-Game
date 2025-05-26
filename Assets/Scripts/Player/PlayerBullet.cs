@@ -18,7 +18,6 @@ public class PlayerBullet : BaseBullet
 
     protected override void OnCollisionEnter(Collision other)
     {
-        Debug.Log($"Bullet collided with: {other.gameObject.name}");
         // todo: when bullet hits
         base.OnCollisionEnter(other);
     }
