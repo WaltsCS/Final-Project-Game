@@ -20,5 +20,6 @@ public class PlayerStates : MonoBehaviour
     }
 
     public Action Shoot;
+    public Action Die;
 
 }
