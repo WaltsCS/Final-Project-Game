@@ -118,7 +118,6 @@ GameObject:
   m_Component:
   - component: {fileID: 569445925443670042}
   - component: {fileID: 4504497231733499348}
-  - component: {fileID: 8236106266626294928}
   m_Layer: 8
   m_Name: MiniBoss
   m_TagString: Enemy
@@ -171,23 +170,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8236106266626294928
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5901663639600152095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 002cac0f767bece4a932ddd7d3f266ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 3
-  projectilePrefab: {fileID: 797301889827987112, guid: 7ac0f1677a4d0f24eb23653f1a63b96e, type: 3}
-  projectileSpeed: 10
-  shootInterval: 0.5
-  shootPoint: {fileID: 1535574845423983689}
 --- !u!1 &7280021800190596656
 GameObject:
   m_ObjectHideFlags: 0
