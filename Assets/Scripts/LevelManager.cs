@@ -26,11 +26,6 @@ public class LevelManager : MonoBehaviour
 
     private void Awake()
     {
-        // Cache all active spawners that self-registered
-        spawners = new List<WaveSpawner>(WaveSpawner.Instances);
-        if (spawners.Count == 0)
-            Debug.LogWarning("[LevelManager] No WaveSpawner instances found in scene.");
-
         // Hide complete UI initially
         if (levelCompleteUI != null)
             levelCompleteUI.SetActive(false);
@@ -38,6 +33,11 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        // Cache all active spawners that self-registered
+        spawners = new List<WaveSpawner>(WaveSpawner.Instances);
+        if (spawners.Count == 0)
+            Debug.LogWarning("[LevelManager] No WaveSpawner instances found in scene.");
+
         if (waves == null || waves.Count == 0)
         {
             Debug.LogError("[LevelManager] No regular waves assigned!");
