@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [Header("Managers")]
     // todo: Insert managers here (time, audio, etc.)
 
-    private bool isGameActive = false;
+    private bool isGameActive = true;
 
     public bool IsGameActive
     {

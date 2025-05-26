@@ -323,7 +323,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  projectilePrefab: {fileID: 797301889827987112, guid: 7ac0f1677a4d0f24eb23653f1a63b96e, type: 3}
+  projectilePrefab: {fileID: 797301889827987112, guid: 4197375377e23034786c0bbfc3ea0d82, type: 3}
   projectileSpeed: 10
   shootInterval: 1
   shootPoint: {fileID: 2967891984739395255}
+  obstacleTag: Obstacle
+  avoidanceStrength: 5
+  avoidanceRayDistance: 2

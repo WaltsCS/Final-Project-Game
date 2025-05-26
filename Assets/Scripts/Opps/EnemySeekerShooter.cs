@@ -88,4 +88,12 @@ public class EnemySeekerShooter : MonoBehaviour
         if (prb != null)
             prb.linearVelocity = dir * projectileSpeed;
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player Bullet"))
+        {
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+    }
 }

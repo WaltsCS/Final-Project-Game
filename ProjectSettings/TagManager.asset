@@ -8,6 +8,10 @@ TagManager:
   - Destructible
   - Hazard
   - Scene
+  - Undefined
+  - PowerUpFireRate
+  - PowerUpHealth
+  - Player Bullet
   layers:
   - Default
   - TransparentFX
