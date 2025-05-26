@@ -45,6 +45,7 @@ public class PlayerTakeDamage : MonoBehaviour
     private void Die()
     {
         playerStates.IsAlive = false;
+        Destroy(this.gameObject);
         GameObject.Find("GameManager").GetComponent<GameManager>().DisplayGameOver();
     }
 }
