@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [Header("Shoot Properties")]
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform bulletSpawnPoint;
+    [SerializeField] private float bulletSpeed = 10f;
 
     private Rigidbody rb;
     private PlayerStates playerStates;
@@ -21,11 +22,21 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    private void OnEnable()
+    {
+        playerStates.Shoot += ShootBullet;
+    }
+
+    private void OnDisable()
+    {
+        playerStates.Shoot -= ShootBullet;
+    }
+
     void Update()
     {
         if (playerStates.IsAlive && Input.GetButton("Fire1") && Time.time > nextFireTime)
         {
-            ShootBullet();
+            playerStates.Shoot.Invoke();
             nextFireTime = Time.time + playerStates.FireRate;
         }
     }
@@ -56,6 +67,8 @@ public class PlayerController : MonoBehaviour
 
     private void ShootBullet()
     {
-        Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        Rigidbody bulletRb = bullet.GetComponent<Rigidbody>();
+        bulletRb.linearVelocity = bulletSpawnPoint.forward * bulletSpeed;
     }
 }

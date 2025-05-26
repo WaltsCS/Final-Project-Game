@@ -19,4 +19,6 @@ public class PlayerStates : MonoBehaviour
         set { fireRate = value; }
     }
 
+    public Action Shoot;
+
 }
