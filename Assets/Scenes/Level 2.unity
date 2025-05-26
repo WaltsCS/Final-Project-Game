@@ -1247,18 +1247,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1085276615}
     m_Modifications:
     - target: {fileID: 2129564921876985215, guid: ba01d9f890df7c24db50f8ac0e42cf64, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2129564921876985215, guid: ba01d9f890df7c24db50f8ac0e42cf64, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.7225
-      objectReference: {fileID: 0}
-    - target: {fileID: 2129564921876985215, guid: ba01d9f890df7c24db50f8ac0e42cf64, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2129564921876985215, guid: ba01d9f890df7c24db50f8ac0e42cf64, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0070328414
       objectReference: {fileID: 0}
@@ -1376,11 +1364,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba01d9f890df7c24db50f8ac0e42cf64, type: 3}
---- !u!4 &437839774 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 669506011341806182, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
-  m_PrefabInstance: {fileID: 2027728435}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &460445685 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2129564921876985215, guid: ba01d9f890df7c24db50f8ac0e42cf64, type: 3}
@@ -1772,7 +1755,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 2
 --- !u!114 &612179962
 MonoBehaviour:
@@ -2146,11 +2129,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2129564921876985215, guid: ba01d9f890df7c24db50f8ac0e42cf64, type: 3}
   m_PrefabInstance: {fileID: 92719414}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &855521267 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7639613846629726709, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
-  m_PrefabInstance: {fileID: 2027728435}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &899142068
 PrefabInstance:
@@ -2662,6 +2640,7 @@ GameObject:
   - component: {fileID: 1085276614}
   - component: {fileID: 1085276613}
   - component: {fileID: 1085276612}
+  - component: {fileID: 1085276616}
   m_Layer: 0
   m_Name: Level1
   m_TagString: Scene
@@ -2799,6 +2778,38 @@ Transform:
   - {fileID: 57472578}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1085276616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085276611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: e63cec0295bfb824ebd045498a6bd000, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1001 &1093209670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4587,7 +4598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 569445925443670042, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00000023841858
+      value: 1.06
       objectReference: {fileID: 0}
     - target: {fileID: 569445925443670042, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4621,50 +4632,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4504497231733499348, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5901663639600152095, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
       propertyPath: m_Name
       value: MiniBoss
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3277598575759583195, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5901663639600152095, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2027728438}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
---- !u!1 &2027728436 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5901663639600152095, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
-  m_PrefabInstance: {fileID: 2027728435}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &2027728437 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1535574845423983689, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
-  m_PrefabInstance: {fileID: 2027728435}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2027728438
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2027728436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88d2b5987f1aab84cbe7fec32461ed75, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 3
-  projectilePrefab: {fileID: 797301889827987112, guid: 7ac0f1677a4d0f24eb23653f1a63b96e, type: 3}
-  projectileSpeed: 10
-  shootInterval: 0.5
-  shootPoint: {fileID: 0}
-  sideShotAngle: 30
-  centerShootPoint: {fileID: 2027728437}
-  leftShootPoint: {fileID: 437839774}
-  rightShootPoint: {fileID: 855521267}
 --- !u!1001 &2061604289
 PrefabInstance:
   m_ObjectHideFlags: 0

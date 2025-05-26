@@ -149,7 +149,8 @@ GameObject:
   m_Component:
   - component: {fileID: 569445925443670042}
   - component: {fileID: 4504497231733499348}
-  - component: {fileID: 3277598575759583195}
+  - component: {fileID: 2167924109251577560}
+  - component: {fileID: 5902157365767702763}
   m_Layer: 8
   m_Name: MiniBoss
   m_TagString: Enemy
@@ -199,12 +200,12 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &3277598575759583195
+--- !u!114 &2167924109251577560
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -221,10 +222,35 @@ MonoBehaviour:
   projectileSpeed: 10
   shootInterval: 0.5
   shootPoint: {fileID: 0}
+  obstacleTag: Destructible
+  avoidanceStrength: 5
+  avoidanceRayDistance: 2
   sideShotAngle: 30
   centerShootPoint: {fileID: 1535574845423983689}
   leftShootPoint: {fileID: 669506011341806182}
   rightShootPoint: {fileID: 7639613846629726709}
+--- !u!195 &5902157365767702763
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5901663639600152095}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 2
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 1
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 1
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &7280021800190596656
 GameObject:
   m_ObjectHideFlags: 0

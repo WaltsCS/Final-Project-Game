@@ -13,15 +13,23 @@ public class EnemySeekerShooter : MonoBehaviour
     [Tooltip("Speed of the fired projectile")]
     [SerializeField] protected float projectileSpeed = 10f;
     [Tooltip("Time between shots")]
-    [SerializeField] private float shootInterval = 2f;
+    [SerializeField] protected float shootInterval = 2f;
     [Tooltip("Local point to spawn projectiles (optional)")]
     [SerializeField] protected Transform shootPoint;
 
-    private Transform player;
-    private float shootTimer;
+    [Header("Obstacle Avoidance")]
+    [Tooltip("Tag of obstacles to avoid")]
+    [SerializeField] protected string obstacleTag = "Obstacle";
+    [Tooltip("How strongly the enemy avoids obstacles")]
+    [SerializeField] protected float avoidanceStrength = 5f;
+    [Tooltip("How far ahead to check for obstacles")]
+    [SerializeField] protected float avoidanceRayDistance = 2f;
+
+    protected Transform player;
+    protected float shootTimer;
     private Rigidbody rb;
 
-    void Awake()
+    protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindWithTag("Player")?.transform;
@@ -29,7 +37,7 @@ public class EnemySeekerShooter : MonoBehaviour
             Debug.LogError("[EnemySeekerShooter] No Player found in scene with tag 'Player'.");
     }
 
-    void Update()
+    protected virtual void Update()
     {
         if (player == null) return;
 
@@ -50,7 +58,7 @@ public class EnemySeekerShooter : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         if (player == null) return;
 

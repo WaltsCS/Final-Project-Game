@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyMiniBossShooter : EnemySeekerShooter
 {
@@ -9,6 +10,16 @@ public class EnemyMiniBossShooter : EnemySeekerShooter
     [SerializeField] private Transform centerShootPoint;
     [SerializeField] private Transform leftShootPoint;
     [SerializeField] private Transform rightShootPoint;
+
+    private NavMeshAgent agent;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        agent = GetComponent<NavMeshAgent>();
+    }
+
+    protected override void FixedUpdate(){}
 
     protected override void Shoot(Vector3 direction)
     {
@@ -34,5 +45,30 @@ public class EnemyMiniBossShooter : EnemySeekerShooter
         var prb = proj.GetComponent<Rigidbody>();
         if (prb != null)
             prb.linearVelocity = dir * projectileSpeed;
+    }
+
+    protected override void Update()
+    {
+        if (player == null) return;
+
+        // Set the agent's destination to the player's position
+        agent.SetDestination(player.position);
+
+        // Face the player when shooting
+        Vector3 toPlayer = player.position - transform.position;
+        toPlayer.y = 0;
+        if (toPlayer.sqrMagnitude > 0.001f)
+        {
+            Quaternion targetRot = Quaternion.LookRotation(toPlayer, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRot, 5f * Time.deltaTime);
+        }
+
+        // Shoot on interval
+        shootTimer -= Time.deltaTime;
+        if (shootTimer <= 0f)
+        {
+            Shoot(toPlayer.normalized);
+            shootTimer = shootInterval;
+        }
     }
 } 
