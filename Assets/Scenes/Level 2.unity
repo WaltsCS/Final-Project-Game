@@ -1376,6 +1376,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba01d9f890df7c24db50f8ac0e42cf64, type: 3}
+--- !u!4 &437839774 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 669506011341806182, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
+  m_PrefabInstance: {fileID: 2027728435}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &460445685 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2129564921876985215, guid: ba01d9f890df7c24db50f8ac0e42cf64, type: 3}
@@ -2137,41 +2142,15 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba01d9f890df7c24db50f8ac0e42cf64, type: 3}
---- !u!1 &781281286
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 781281287}
-  m_Layer: 8
-  m_Name: rightShootPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &781281287
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781281286}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 0, z: 1.78}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2027728440}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &815013056 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2129564921876985215, guid: ba01d9f890df7c24db50f8ac0e42cf64, type: 3}
   m_PrefabInstance: {fileID: 92719414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &855521267 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7639613846629726709, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
+  m_PrefabInstance: {fileID: 2027728435}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &899142068
 PrefabInstance:
@@ -3514,37 +3493,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba01d9f890df7c24db50f8ac0e42cf64, type: 3}
---- !u!1 &1454433391
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1454433392}
-  m_Layer: 8
-  m_Name: leftShootPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1454433392
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1454433391}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 1.78}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2027728440}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1458902172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4677,15 +4625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MiniBoss
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3277598575759583195, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 569445925443670042, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 1454433392}
-    - targetCorrespondingSourceObject: {fileID: 569445925443670042, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 781281287}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5901663639600152095, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
       insertIndex: -1
@@ -4720,13 +4663,8 @@ MonoBehaviour:
   shootPoint: {fileID: 0}
   sideShotAngle: 30
   centerShootPoint: {fileID: 2027728437}
-  leftShootPoint: {fileID: 781281287}
-  rightShootPoint: {fileID: 1454433392}
---- !u!4 &2027728440 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 569445925443670042, guid: 1e0cfa65f608a84429f78561a1b71e9b, type: 3}
-  m_PrefabInstance: {fileID: 2027728435}
-  m_PrefabAsset: {fileID: 0}
+  leftShootPoint: {fileID: 437839774}
+  rightShootPoint: {fileID: 855521267}
 --- !u!1001 &2061604289
 PrefabInstance:
   m_ObjectHideFlags: 0
