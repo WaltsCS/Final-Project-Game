@@ -9,19 +9,27 @@ public class EnemySeekerShooter : MonoBehaviour
 
     [Header("Shooting")]
     [Tooltip("Projectile prefab to fire (must have a Rigidbody and EnemyBullet.cs on it)")]
-    [SerializeField] protected GameObject projectilePrefab;
+    [SerializeField] private GameObject projectilePrefab;
     [Tooltip("Speed of the fired projectile")]
-    [SerializeField] protected float projectileSpeed = 10f;
+    [SerializeField] private float projectileSpeed = 10f;
     [Tooltip("Time between shots")]
     [SerializeField] private float shootInterval = 2f;
     [Tooltip("Local point to spawn projectiles (optional)")]
-    [SerializeField] protected Transform shootPoint;
+    [SerializeField] private Transform shootPoint;
+
+    [Header("Obstacle Avoidance")]
+    [Tooltip("Tag of obstacles to avoid")]
+    [SerializeField] private string obstacleTag = "Obstacle";
+    [Tooltip("How strongly the enemy avoids obstacles")]
+    [SerializeField] private float avoidanceStrength = 5f;
+    [Tooltip("How far ahead to check for obstacles")]
+    [SerializeField] private float avoidanceRayDistance = 2f;
 
     private Transform player;
     private float shootTimer;
     private Rigidbody rb;
 
-    void Awake()
+    private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         player = GameObject.FindWithTag("Player")?.transform;
@@ -29,7 +37,7 @@ public class EnemySeekerShooter : MonoBehaviour
             Debug.LogError("[EnemySeekerShooter] No Player found in scene with tag 'Player'.");
     }
 
-    void Update()
+    private void Update()
     {
         if (player == null) return;
 
@@ -50,7 +58,7 @@ public class EnemySeekerShooter : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         if (player == null) return;
 
@@ -60,7 +68,7 @@ public class EnemySeekerShooter : MonoBehaviour
         rb.MovePosition(rb.position + moveDelta);
     }
 
-    protected virtual void Shoot(Vector3 direction)
+    private void Shoot(Vector3 direction)
     {
         // 1) Compute a horizontal-only direction
         Vector3 toPlayer = player.position - transform.position;
