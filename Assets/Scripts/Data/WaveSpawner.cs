@@ -2,27 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaveSpawner : MonoBehaviour        ///For each spawnPoint empty gameObject
+public class WaveSpawner : MonoBehaviour
 {
-    [Tooltip("Point this spawner at the same LevelData list your LevelManager uses.")]
-    public List<WaveData> waves;
-    private int waveIndex = 1;      ///purely internal variable, Logs say "unused" to keep absolute control of spawners
+    [Tooltip("Define each wave (enemy prefabs, count, interval) in order")]
+    [SerializeField] private List<WaveData> waves;
 
-    public static readonly List<WaveSpawner> Instances = new List<WaveSpawner>();   ///have each spawner announce itself:
-    private void OnEnable()
+    private void Start()
     {
-        Instances.Add(this);
-    }
-    private void OnDisable()
-    {
-        Instances.Remove(this);
+        if (waves == null || waves.Count == 0)
+        {
+            Debug.LogWarning("[WaveSpawner] No waves assigned!");
+            return;
+        }
+        StartCoroutine(RunAllWaves());
     }
 
-    public IEnumerator SpawnWaveAtPoint(WaveData wave)
+    private IEnumerator RunAllWaves()
     {
-        yield return new WaitForSeconds(Random.Range(0f, 1f));  /// optional delay for next wave spawn
+        foreach (var wave in waves)
+        {
+            ///1) Spawn this wave
+            yield return StartCoroutine(SpawnWave(wave));
+
+            ///2) Wait until the player has destroyed every spawned enemy
+            yield return new WaitUntil(() =>
+                GameObject.FindGameObjectsWithTag("Enemy").Length == 0
+            );
+        }
+
+        Debug.Log("[WaveSpawner] All waves complete on this spawner.");
+    }
+
+    private IEnumerator SpawnWave(WaveData wave)
+    {
         for (int i = 0; i < wave.count; i++)
         {
+            ///pick a random prefab and spawn
             var prefab = wave.enemyPrefabs[Random.Range(0, wave.enemyPrefabs.Count)];
             Instantiate(prefab, transform.position, Quaternion.identity);
             yield return new WaitForSeconds(wave.spawnInterval);
