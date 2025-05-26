@@ -63,16 +63,23 @@ public class PowerUpSpawner : MonoBehaviour
         }
 
         // Select one random spawn point
+        int powerUpsToSpawnCount = Mathf.Min(spawnPoints.Length, availableSpawnPoints.Count);
         List<int> selectedSpawnPointIndices = new List<int>();
-        if (availableSpawnPoints.Count > 0)
+        for (int i = 0; i < powerUpsToSpawnCount; i++)
         {
+            if (availableSpawnPoints.Count == 0)
+            {
+                break;
+            }
+
             int randomIndex = Random.Range(0, availableSpawnPoints.Count);
-            selectedSpawnPointIndices.Add(availableSpawnPoints[randomIndex]);
+            int selectedSpawnPointIndex = availableSpawnPoints[randomIndex];
+            selectedSpawnPointIndices.Add(selectedSpawnPointIndex);
+            availableSpawnPoints.RemoveAt(randomIndex);
         }
 
         foreach (int spawnPointIndex in selectedSpawnPointIndices)
         {
-            // todo: add offset if necessary
             Vector3 spawnPosition = spawnPoints[spawnPointIndex].position;
 
             // Instantiate a random power-up prefab

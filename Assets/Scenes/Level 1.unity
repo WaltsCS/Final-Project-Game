@@ -415,7 +415,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &342649279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -922,7 +922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &507643789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1461,11 +1461,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0783a216b0f71748ad6c7fbf6e9873c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waves:
-  - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  miniBossWave: {fileID: 0}
-  finalBossWave: {fileID: 0}
-  miniBossEveryXLevels: 3
   levelCompleteUI: {fileID: 1778946783}
 --- !u!1 &715389602
 GameObject:
@@ -2443,7 +2438,7 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 1459832791}
   - {fileID: 715389603}
-  spawnInterval: 5
+  spawnInterval: 10
 --- !u!4 &1363776800 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1634862204795693691, guid: 0a4df1c971f7c9343a0752ddeea295a7, type: 3}
