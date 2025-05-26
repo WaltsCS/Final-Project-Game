@@ -415,7 +415,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &342649279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -922,7 +922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &507643789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1463,7 +1463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 715389603}
   m_Layer: 0
-  m_Name: PowerUpSpawnPoint_2
+  m_Name: PowerUpSpawnPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1478,7 +1478,7 @@ Transform:
   m_GameObject: {fileID: 715389602}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.72, y: 0, z: -8.44}
+  m_LocalPosition: {x: 12.72, y: 4.5, z: -8.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2386,8 +2386,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1357578232}
+  - component: {fileID: 1357578233}
   m_Layer: 0
-  m_Name: PowerUpSpawnPoints
+  m_Name: PowerUpSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2410,6 +2411,25 @@ Transform:
   - {fileID: 715389603}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1357578233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357578231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccf4f0128d3df654e82ede9609bbcd3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUpPrefabs:
+  - {fileID: 797301889827987112, guid: cccaf31719305c84692cc47eb0cf9dc6, type: 3}
+  - {fileID: 797301889827987112, guid: 76e5c84d9518f0645b777d9e1dfdaddd, type: 3}
+  spawnPoints:
+  - {fileID: 1459832791}
+  - {fileID: 715389603}
+  spawnInterval: 5
 --- !u!4 &1363776800 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1634862204795693691, guid: 0a4df1c971f7c9343a0752ddeea295a7, type: 3}
@@ -2429,8 +2449,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1459832791}
+  - component: {fileID: 1459832792}
   m_Layer: 0
-  m_Name: PowerUpSpawnPoint_1
+  m_Name: PowerUpSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2445,12 +2466,24 @@ Transform:
   m_GameObject: {fileID: 1459832790}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.94, y: 0, z: -8.34}
+  m_LocalPosition: {x: -5.94, y: 4.5, z: -8.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1357578232}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1459832792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459832790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eac5080bdef137841a59310feee06cab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1460714775
 PrefabInstance:
   m_ObjectHideFlags: 0
