@@ -21,11 +21,31 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
+    private void OnEnable()
+    {
+        playerStates.Shoot += ShootBullet;
+        playerStates.Die += Die;
+    }
+
+    private void OnDisable()
+    {
+        playerStates.Shoot -= ShootBullet;
+        playerStates.Die -= Die;
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            playerStates.Die.Invoke();
+        }
+    }
+
     void Update()
     {
         if (playerStates.IsAlive && Input.GetButton("Fire1") && Time.time > nextFireTime)
         {
-            ShootBullet();
+            playerStates.Shoot.Invoke();
             nextFireTime = Time.time + playerStates.FireRate;
         }
     }
@@ -52,6 +72,12 @@ public class PlayerController : MonoBehaviour
             Quaternion deltaRotation = Quaternion.Euler(0, rotationAmount, 0);
             rb.MoveRotation(rb.rotation * deltaRotation);
         }
+    }
+
+    private void Die()
+    {
+        playerStates.IsAlive = false;
+        GameObject.Find("GameManager").GetComponent<GameManager>().DisplayGameOver();
     }
 
     private void ShootBullet()
