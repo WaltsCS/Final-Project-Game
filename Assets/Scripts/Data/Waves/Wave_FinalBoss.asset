@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Wave_FinalBoss
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 0}
+  - {fileID: 6123527097752391098, guid: dc8930c487e63b44cb52ef8764d2c9e0, type: 3}
   count: 10
   spawnInterval: 1
