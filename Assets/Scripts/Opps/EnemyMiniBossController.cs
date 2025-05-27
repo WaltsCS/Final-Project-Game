@@ -8,6 +8,9 @@ public class EnemyMiniBossController : MonoBehaviour
     private Transform player;
     private NavMeshAgent agent;
 
+    [SerializeField] private int hitCount = 0;
+    [SerializeField] private const int maxHits = 3;
+
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -25,5 +28,18 @@ public class EnemyMiniBossController : MonoBehaviour
     {
         if (player == null || agent == null) return;
         agent.SetDestination(player.position);
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        
+        if (collision.gameObject.CompareTag("PlayerBullet"))
+        {
+            hitCount += 1;
+            if (hitCount >= maxHits)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }
