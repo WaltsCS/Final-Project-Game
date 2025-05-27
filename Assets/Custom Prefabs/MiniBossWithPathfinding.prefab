@@ -342,9 +342,10 @@ GameObject:
   - component: {fileID: 4324646129947242602}
   - component: {fileID: 1799219260294284549}
   - component: {fileID: 8047317004140817170}
+  - component: {fileID: -1550434842868407256}
   m_Layer: 0
   m_Name: MiniBossWithPathfinding
-  m_TagString: Untagged
+  m_TagString: Miniboss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -400,6 +401,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  maxHits: 10
+--- !u!65 &-1550434842868407256
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7367769260169965889}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.2795122, y: 1.6880487, z: 3.1738458}
+  m_Center: {x: 0.18663788, y: 0.7661875, z: 0.39314246}
 --- !u!1 &8004785854794564297
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,8 +19,15 @@ public class PlayerBullet : BaseBullet
     protected override void OnCollisionEnter(Collision other)
     {
         // todo: when bullet hits
+        if (other.gameObject.CompareTag("Miniboss"))
+        {
+
+            var enemy = other.gameObject.GetComponent<EnemyMiniBossController>();
+            if (enemy != null)
+            {
+                enemy.TakeDamage();
+            }
+        }
         base.OnCollisionEnter(other);
     }
-
-
 }

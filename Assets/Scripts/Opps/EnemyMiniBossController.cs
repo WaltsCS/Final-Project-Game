@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -28,18 +29,16 @@ public class EnemyMiniBossController : MonoBehaviour
         if (player == null || agent == null) return;
         agent.SetDestination(player.position);
 
-        if (hitCount >= maxHits)
-            {
-                Destroy(gameObject);
-            }
     }
 
-    void OnCollisionEnter(Collision collision)
+    public void TakeDamage()
     {
+        hitCount += 1;
+        Debug.Log($"[EnemyMiniBossController] Hit count: {hitCount}");
         
-        if (collision.gameObject.CompareTag("PlayerBullet"))
+        if (hitCount >= maxHits)
         {
-            hitCount += 1;
+            Destroy(gameObject);
         }
     }
 }

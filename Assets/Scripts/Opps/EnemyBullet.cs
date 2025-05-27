@@ -7,7 +7,7 @@ public class EnemyBullet : BaseBullet
         Debug.Log($"EnemyBullet collided with: {other.gameObject.name}");
 
         // Check for scene collision
-        if (other.gameObject.CompareTag("Scene"))
+        if (other.gameObject.CompareTag("Scene") || other.gameObject.CompareTag("Miniboss"))
         {
             return;
         }
