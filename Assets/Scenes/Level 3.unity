@@ -4083,11 +4083,7 @@ MonoBehaviour:
   fireRateIncreaseDuration: 5
   fireRateValue: 0.05
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
   powerUpUI: {fileID: 0}
-=======
-  powerUpUI: {fileID: 1537432863}
->>>>>>> Stashed changes
 =======
   powerUpUI: {fileID: 1537432863}
 >>>>>>> Stashed changes
@@ -5820,13 +5816,8 @@ RectTransform:
   - {fileID: 1778097576}
   - {fileID: 138405339}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
   - {fileID: 255099832}
   - {fileID: 1900620318}
-=======
-  - {fileID: 112560408}
-  - {fileID: 1537432864}
->>>>>>> Stashed changes
 =======
   - {fileID: 112560408}
   - {fileID: 1537432864}
