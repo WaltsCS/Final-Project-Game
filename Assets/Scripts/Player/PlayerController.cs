@@ -15,13 +15,14 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
     private PlayerStates playerStates;
-    private LevelManager levelManager;
     private float nextFireTime;
+    private LevelManager levelManager;
 
     void Awake()
     {
         playerStates = GetComponent<PlayerStates>();
         rb = GetComponent<Rigidbody>();
+        levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
 
         if (playerCamera == null)
             Debug.LogError("PlayerController: please assign the playerCamera field.");
@@ -39,21 +40,24 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+
+        if (!levelManager.IsLevelActive)
+            return;
+
         // Handle shooting
-        if (playerStates.IsAlive && Input.GetButton("Fire1") && Time.time > nextFireTime)
+        if (Input.GetButton("Fire1") && Time.time > nextFireTime)
         {
             playerStates.Shoot.Invoke();
             nextFireTime = Time.time + playerStates.FireRate;
         }
 
         // Handle mouse‐based rotation
-        if (playerStates.IsAlive)
-            RotateTowardsMouse();
+        RotateTowardsMouse();
     }
 
     void FixedUpdate()
     {
-        if (!playerStates.IsAlive) return;
+        if (!levelManager.IsLevelActive) return;
 
         // Movement input
         float verticalInput = Input.GetAxis("Vertical Movement");
