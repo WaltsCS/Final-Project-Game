@@ -38,7 +38,11 @@ public class LevelManager : MonoBehaviour
         while (GameObject.FindGameObjectsWithTag("Enemy").Length > 0)
             yield return null;
 
-        DisplayLevelComplete();
+        if (isLevelActive)
+        {
+            DisplayLevelComplete();
+
+        }
     }
 
     private void DisplayLevelComplete()
