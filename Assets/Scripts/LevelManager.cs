@@ -30,6 +30,8 @@ public class LevelManager : MonoBehaviour
 
     private IEnumerator CheckForLevelClear()
     {
+        // Allocate a short delay to load the scene
+        // Fix for race condition where enemies spawn before the level is active
         yield return new WaitForSeconds(0.5f);
 
         // Wait until there are no more enemies in the scene
@@ -54,7 +56,6 @@ public class LevelManager : MonoBehaviour
         if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
             SceneManager.LoadScene(nextSceneIndex);
-            // UnDisplayLevelComplete();
         }
 
     }
