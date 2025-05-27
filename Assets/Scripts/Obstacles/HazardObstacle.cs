@@ -6,8 +6,7 @@ public class HazardObstacle : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            PlayerStates playerStates = other.gameObject.GetComponent<PlayerStates>();
-            playerStates.Die.Invoke();
+            Destroy(other.gameObject);
         }
     }
 }
