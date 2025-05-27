@@ -2,12 +2,19 @@ using UnityEngine;
 
 public class EnemyBulletIndestructable : BaseBullet
 {
-    private void OnCollisionEnter(Collision other)
+    protected override void OnCollisionEnter(Collision other)
     {
         Debug.Log($"EnemyBullet collided with: {other.gameObject.name}");
 
         if (other.gameObject.CompareTag("Scene"))
         {
+            return;
+        }
+
+        if (other.gameObject.CompareTag("Wall"))
+        {
+            // If it hits another enemy, destroy the bullet
+            Destroy(gameObject);
             return;
         }
 

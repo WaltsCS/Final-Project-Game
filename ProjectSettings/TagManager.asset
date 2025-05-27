@@ -12,6 +12,7 @@ TagManager:
   - PowerUpFireRate
   - PowerUpHealth
   - Player Bullet
+  - Wall
   layers:
   - Default
   - TransparentFX
