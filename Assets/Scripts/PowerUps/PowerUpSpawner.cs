@@ -26,7 +26,6 @@ public class PowerUpSpawner : MonoBehaviour
             isSpawnPointOccupied[i] = false;
         }
 
-        // todo: remove this
         StartSpawning();
     }
 
@@ -40,8 +39,8 @@ public class PowerUpSpawner : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(spawnInterval);
-            bool isGameActive = GameObject.Find("GameManager").GetComponent<GameManager>().IsGameActive;
-            if (!isGameActive)
+            bool isLevelActive = GameObject.Find("LevelManager").GetComponent<LevelManager>().IsLevelActive;
+            if (!isLevelActive)
             {
                 yield break;
             }

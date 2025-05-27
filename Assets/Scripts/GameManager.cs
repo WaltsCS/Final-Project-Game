@@ -1,18 +1,8 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Text Display")]
-    [SerializeField] private TextMeshProUGUI gameOverText;
-
-    [Header("Buttons")]
-    [SerializeField] private GameObject restartButton;
-
-    [Header("Managers")]
-    // todo: Insert managers here (time, audio, etc.)
-
+    // todo: use this class when implementing the start menu
     private bool isGameActive = true;
 
     public bool IsGameActive
@@ -20,16 +10,4 @@ public class GameManager : MonoBehaviour
         get { return isGameActive; }
     }
 
-    public void DisplayGameOver()
-    {
-        isGameActive = false;
-        gameOverText.gameObject.SetActive(true);
-        restartButton.gameObject.SetActive(true);
-    }
-
-    public void RestartGame()
-    {
-        // Restart to the first scene
-        SceneManager.LoadScene(0);
-    }
 }

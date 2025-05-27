@@ -11,7 +11,7 @@ public class PowerUpController : MonoBehaviour
 
     private Coroutine stayUpTimerCoroutine;
     private PowerUpStates powerUpStates;
-    private GameManager gameManager;
+    private LevelManager levelManager;
 
     void Awake()
     {
@@ -34,7 +34,7 @@ public class PowerUpController : MonoBehaviour
 
     void Start()
     {
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         powerUpStates.OnPowerUpPopUp.Invoke();
     }
 
@@ -68,7 +68,7 @@ public class PowerUpController : MonoBehaviour
 
     private void ShowPowerUp()
     {
-        if (gameManager.IsGameActive)
+        if (levelManager.IsLevelActive)
         {
             stayUpTimerCoroutine = StartCoroutine(StayUpTimer());
         }
