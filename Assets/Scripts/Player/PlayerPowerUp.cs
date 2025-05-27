@@ -6,7 +6,7 @@ public class PlayerPowerUp : MonoBehaviour
     [Header("Fire Rate Properties")]
     [SerializeField] private float fireRateIncreaseDuration = 5f;
     [SerializeField] private float fireRateValue = 0.05f;
-    [SerializeField] private PowerUpUI powerUpUI; 
+    [SerializeField] private PowerUpUI powerUpUI;
 
     private PlayerStates playerStates;
     private Coroutine fireRateCoroutine;
