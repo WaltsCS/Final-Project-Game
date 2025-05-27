@@ -90,7 +90,7 @@ public class EnemySeekerShooter : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player Bullet"))
+        if (collision.gameObject.CompareTag("PlayerBullet"))
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);

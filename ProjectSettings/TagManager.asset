@@ -11,7 +11,7 @@ TagManager:
   - Undefined
   - PowerUpFireRate
   - PowerUpHealth
-  - Player Bullet
+  - PlayerBullet
   - Wall
   layers:
   - Default
