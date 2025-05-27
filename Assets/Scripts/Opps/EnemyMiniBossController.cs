@@ -8,9 +8,8 @@ public class EnemyMiniBossController : MonoBehaviour
     private Transform player;
     private NavMeshAgent agent;
 
-    [SerializeField] private int hitCount = 0;
-    [SerializeField] private const int maxHits = 3;
-
+    private int hitCount = 0;
+    [SerializeField] private int maxHits = 10;
     private void Awake()
     {
         agent = GetComponent<NavMeshAgent>();
