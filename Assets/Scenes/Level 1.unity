@@ -1663,7 +1663,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireRateIncreaseDuration: 5
   fireRateValue: 0.05
-  powerUpUI: {fileID: 0}
+  powerUpUI: {fileID: 265598796}
 --- !u!4 &615484513 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1634862204795693691, guid: 0a4df1c971f7c9343a0752ddeea295a7, type: 3}
@@ -3653,7 +3653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d565c3a09a3de249aca3f7ee5b8d57b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerStates: {fileID: 0}
+  playerStates: {fileID: 612179963}
   healthBars:
   - {fileID: 923278646}
   - {fileID: 986528664}
