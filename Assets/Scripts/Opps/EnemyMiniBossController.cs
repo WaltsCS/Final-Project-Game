@@ -27,6 +27,11 @@ public class EnemyMiniBossController : MonoBehaviour
     {
         if (player == null || agent == null) return;
         agent.SetDestination(player.position);
+
+        if (hitCount >= maxHits)
+            {
+                Destroy(gameObject);
+            }
     }
 
     void OnCollisionEnter(Collision collision)
@@ -35,10 +40,6 @@ public class EnemyMiniBossController : MonoBehaviour
         if (collision.gameObject.CompareTag("PlayerBullet"))
         {
             hitCount += 1;
-            if (hitCount >= maxHits)
-            {
-                Destroy(gameObject);
-            }
         }
     }
 }
