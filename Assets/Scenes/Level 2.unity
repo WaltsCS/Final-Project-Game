@@ -2135,7 +2135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &764721845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2684,7 +2684,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1057188320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3578,7 +3578,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1348303513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3624,7 +3624,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1384589582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3832,7 +3832,7 @@ Transform:
   m_GameObject: {fileID: 1537164053}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.25, z: 0.65}
+  m_LocalPosition: {x: 0, y: 1, z: 0.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4419,7 +4419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
+  - {fileID: 11400000, guid: 31605f0961bf8114689e0a891be71635, type: 2}
 --- !u!4 &1854902604
 Transform:
   m_ObjectHideFlags: 0
