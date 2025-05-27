@@ -1,73 +1,107 @@
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement Properties")]
     [SerializeField] private float movementSpeed = 10f;
-    [SerializeField] private float rotationSpeed = 50f;
+
+    [Header("Mouse Look")]
+    [SerializeField] private Camera playerCamera;
+    [SerializeField] private float rotationLerpSpeed = 15f;
 
     [Header("Shoot Properties")]
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform bulletSpawnPoint;
 
-    private Rigidbody rb;
+    private CharacterController cc;
     private PlayerStates playerStates;
     private LevelManager levelManager;
     private float nextFireTime;
-
+    private float fixedY;
 
     void Awake()
     {
         playerStates = GetComponent<PlayerStates>();
-        rb = GetComponent<Rigidbody>();
+        cc = GetComponent<CharacterController>();
         levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+
+        fixedY = transform.position.y;
+
+        if (playerCamera == null)
+            Debug.LogError("PlayerController: please assign the playerCamera field.");
     }
 
-    private void OnEnable()
-    {
-        playerStates.Shoot += ShootBullet;
-    }
-
-    private void OnDisable()
-    {
-        playerStates.Shoot -= ShootBullet;
-    }
+    void OnEnable() => playerStates.Shoot += ShootBullet;
+    void OnDisable() => playerStates.Shoot -= ShootBullet;
 
     void Update()
     {
-        if (levelManager.IsLevelActive && Input.GetButton("Fire1") && Time.time > nextFireTime)
+        if (!playerStates.IsAlive) return;
+
+        HandleMovement();
+        RotateTowardsMouse();
+        HandleShooting();
+    }
+
+    private void HandleMovement()
+    {
+        // Read input axes
+        float v = Input.GetAxis("Vertical Movement");
+        float h = Input.GetAxis("Horizontal Movement");
+
+        // Build a movement vector in local space
+        Vector3 move = (transform.forward * v + transform.right * h);
+        if (move.sqrMagnitude > 1f) move.Normalize();
+
+        // Move, preserving the controller's built-in collision
+        cc.Move(move * movementSpeed * Time.deltaTime);
+    }
+
+    private void RotateTowardsMouse()
+    {
+        Ray ray = playerCamera.ScreenPointToRay(Input.mousePosition);
+        Plane ground = new Plane(Vector3.up, Vector3.zero);
+        if (ground.Raycast(ray, out float enter))
+        {
+            Vector3 hit = ray.GetPoint(enter);
+            Vector3 dir = hit - transform.position;
+            dir.y = 0f;
+            if (dir.sqrMagnitude > 0.001f)
+            {
+                Quaternion target = Quaternion.LookRotation(dir, Vector3.up);
+                transform.rotation = Quaternion.Lerp(
+                    transform.rotation,
+                    target,
+                    Time.deltaTime * rotationLerpSpeed
+                );
+            }
+        }
+    }
+
+    private void HandleShooting()
+    {
+        if (Input.GetButton("Fire1") && Time.time > nextFireTime)
         {
             playerStates.Shoot.Invoke();
             nextFireTime = Time.time + playerStates.FireRate;
         }
     }
 
-    void FixedUpdate()
-    {
-        if (!levelManager.IsLevelActive) return;
-
-        // Get inputs
-        float verticalInput = Input.GetAxis("Vertical Movement");
-        float horizontalInput = Input.GetAxis("Horizontal Movement");
-        float horizontalRotation = Input.GetAxis("Horizontal Rotation");
-
-        Vector3 movement = (transform.forward * verticalInput + transform.right * horizontalInput) * movementSpeed * Time.fixedDeltaTime;
-
-        // Apply movement using Rigidbody
-        Vector3 newPosition = rb.position + movement;
-        rb.MovePosition(newPosition);
-
-        // Apply rotation using Rigidbody
-        if (Mathf.Abs(horizontalRotation) > 0.1f)
-        {
-            float rotationAmount = horizontalRotation * rotationSpeed * Time.fixedDeltaTime;
-            Quaternion deltaRotation = Quaternion.Euler(0, rotationAmount, 0);
-            rb.MoveRotation(rb.rotation * deltaRotation);
-        }
-    }
-
     private void ShootBullet()
     {
-        Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
+        Instantiate(
+            bulletPrefab,
+            bulletSpawnPoint.position,
+            bulletSpawnPoint.rotation
+        );
+    }
+
+    void LateUpdate()
+    {
+        // after all movement, force Y back to fixedY
+        Vector3 pos = transform.position;
+        pos.y = fixedY;
+        transform.position = pos;
     }
 }
