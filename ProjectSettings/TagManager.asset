@@ -14,6 +14,11 @@ TagManager:
   - PlayerBullet
   - Wall
   - Miniboss
+  - EnemyBullet
+  - GateKey
+  - BossGateKey
+  - FirstGateKey
+  - SecondGateKey
   layers:
   - Default
   - TransparentFX
