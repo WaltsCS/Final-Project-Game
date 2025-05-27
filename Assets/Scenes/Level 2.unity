@@ -1992,7 +1992,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 10
-  rotationSpeed: 300
+  playerCamera: {fileID: 330585545}
+  rotationLerpSpeed: 15
   bulletPrefab: {fileID: 763193487611053471, guid: 77a1c9ec211e50247ab14b92432cbf90, type: 3}
   bulletSpawnPoint: {fileID: 1537164054}
 --- !u!114 &612179963
