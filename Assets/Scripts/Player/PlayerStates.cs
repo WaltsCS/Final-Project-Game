@@ -18,8 +18,19 @@ public class PlayerStates : MonoBehaviour
         set
         {
             healthBars = value;
+            if (healthBars <= 0)
+            {
+                Die?.Invoke();
+            }
         }
     }
+
+public void AddHealth(int amount)
+{
+    healthBars = Mathf.Min(healthBars + amount, 3); // Max of 3
+    ReplenishHealth?.Invoke();
+}
+
 
     public Action Shoot;
     public Action TakeDamage;

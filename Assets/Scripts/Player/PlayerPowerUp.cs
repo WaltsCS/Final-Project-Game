@@ -6,6 +6,7 @@ public class PlayerPowerUp : MonoBehaviour
     [Header("Fire Rate Properties")]
     [SerializeField] private float fireRateIncreaseDuration = 5f;
     [SerializeField] private float fireRateValue = 0.05f;
+    [SerializeField] private PowerUpUI powerUpUI; 
 
     private PlayerStates playerStates;
     private Coroutine fireRateCoroutine;
@@ -29,13 +30,15 @@ public class PlayerPowerUp : MonoBehaviour
 
     private void IncreaseFireRate()
     {
-        // playerStates.FireRate = 0.05f;
         if (fireRateCoroutine != null)
         {
             StopCoroutine(fireRateCoroutine);
-
         }
+
         fireRateCoroutine = StartCoroutine(FireRateTimer());
+
+        if (powerUpUI != null)
+            powerUpUI.ShowPowerUp(fireRateIncreaseDuration);
     }
 
     private IEnumerator FireRateTimer()
@@ -54,6 +57,5 @@ public class PlayerPowerUp : MonoBehaviour
             playerStates.HealthBars++;
             Debug.Log("Health replenished. Current health bars: " + playerStates.HealthBars);
         }
-
     }
 }
