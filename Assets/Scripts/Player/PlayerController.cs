@@ -15,11 +15,13 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
     private PlayerStates playerStates;
+    private LevelManager levelManager;
     private float nextFireTime;
 
     void Awake()
     {
         playerStates = GetComponent<PlayerStates>();
+        levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         rb = GetComponent<Rigidbody>();
 
         if (playerCamera == null)
@@ -39,23 +41,23 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // Handle shooting
-        if (playerStates.IsAlive && Input.GetButton("Fire1") && Time.time > nextFireTime)
+        if (levelManager.IsLevelActive && Input.GetButton("Fire1") && Time.time > nextFireTime)
         {
             playerStates.Shoot.Invoke();
             nextFireTime = Time.time + playerStates.FireRate;
         }
 
         // Handle mouse‐based rotation
-        if (playerStates.IsAlive)
+        if (levelManager.IsLevelActive)
             RotateTowardsMouse();
     }
 
     void FixedUpdate()
     {
-        if (!playerStates.IsAlive) return;
+        if (!levelManager.IsLevelActive) return;
 
         // Movement input
-        float verticalInput   = Input.GetAxis("Vertical Movement");
+        float verticalInput = Input.GetAxis("Vertical Movement");
         float horizontalInput = Input.GetAxis("Horizontal Movement");
 
         Vector3 moveDelta = (transform.forward * verticalInput + transform.right * horizontalInput)
