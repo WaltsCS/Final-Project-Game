@@ -2,19 +2,14 @@ using UnityEngine;
 
 public class EnemyBulletIndestructable : BaseBullet
 {
-    private void OnCollisionEnter(Collision other)
+
+    protected override void OnCollisionEnter(Collision other)
     {
-        Debug.Log($"EnemyBullet collided with: {other.gameObject.name}");
-
-        if (other.gameObject.CompareTag("Scene"))
+        // Bullet can be destroyed other than player bullets
+        if (other.gameObject.CompareTag("PlayerBullet"))
         {
             return;
         }
-
-        // If it hits the playe damage the player 
-        if (other.gameObject.CompareTag("Player"))
-        {
-            return;
-        }
+        base.OnCollisionEnter(other);
     }
 }
