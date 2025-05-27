@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody rb;
     private PlayerStates playerStates;
+    private LevelManager levelManager;
     private float nextFireTime;
 
 
@@ -19,6 +20,7 @@ public class PlayerController : MonoBehaviour
     {
         playerStates = GetComponent<PlayerStates>();
         rb = GetComponent<Rigidbody>();
+        levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
     }
 
     private void OnEnable()
@@ -33,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (playerStates.IsAlive && Input.GetButton("Fire1") && Time.time > nextFireTime)
+        if (levelManager.IsLevelActive && Input.GetButton("Fire1") && Time.time > nextFireTime)
         {
             playerStates.Shoot.Invoke();
             nextFireTime = Time.time + playerStates.FireRate;
@@ -42,7 +44,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!playerStates.IsAlive) return;
+        if (!levelManager.IsLevelActive) return;
 
         // Get inputs
         float verticalInput = Input.GetAxis("Vertical Movement");

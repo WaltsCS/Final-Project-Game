@@ -3,10 +3,12 @@ using UnityEngine;
 public class PlayerTakeDamage : MonoBehaviour
 {
     private PlayerStates playerStates;
+    private LevelManager levelManager;
 
     private void Awake()
     {
         playerStates = GetComponent<PlayerStates>();
+        levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
     }
 
     private void OnEnable()
@@ -31,7 +33,7 @@ public class PlayerTakeDamage : MonoBehaviour
 
     private void TakeDamage()
     {
-        if (!playerStates.IsAlive) return;
+        if (!levelManager.IsLevelActive) return;
 
         playerStates.HealthBars--;
         Debug.Log($"Player took damage. Remaining health bars: {playerStates.HealthBars}");
@@ -44,8 +46,7 @@ public class PlayerTakeDamage : MonoBehaviour
 
     private void Die()
     {
-        playerStates.IsAlive = false;
         Destroy(this.gameObject);
-        GameObject.Find("GameManager").GetComponent<GameManager>().DisplayGameOver();
+        levelManager.DisplayGameOver();
     }
 }
