@@ -4667,9 +4667,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 612179966}
-  offset: {x: 0, y: 5, z: -2.5}
-  rotationEulerOffset: {x: 5, y: 0, z: 0}
-  smoothSpeed: 20
+  offset: {x: 0, y: 10, z: 0}
+  rotationEulerOffset: {x: 0, y: 0, z: 0}
+  smoothSpeed: 5
 --- !u!4 &1553308855
 Transform:
   m_ObjectHideFlags: 0
