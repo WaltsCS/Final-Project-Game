@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 68042413}
   m_Layer: 0
   m_Name: SecondWaveSpawner (1)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -509,7 +509,7 @@ Transform:
   m_GameObject: {fileID: 68042411}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.9400005, y: 0, z: -23.66}
+  m_LocalPosition: {x: -3.92, y: 0, z: -23.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -528,7 +528,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
 --- !u!1001 &86772111
 PrefabInstance:
@@ -599,7 +598,7 @@ GameObject:
   - component: {fileID: 88215487}
   m_Layer: 0
   m_Name: SecondWaveSpawner (3)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -613,7 +612,7 @@ Transform:
   m_GameObject: {fileID: 88215485}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6800003, y: 0, z: -12.93}
+  m_LocalPosition: {x: -3.29, y: 0, z: -12.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -632,7 +631,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
 --- !u!1 &92072019
 GameObject:
@@ -981,7 +979,7 @@ GameObject:
   - component: {fileID: 135210362}
   m_Layer: 0
   m_Name: FinalWaveSpawner1stSet (5)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1014,8 +1012,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 11400000, guid: 31605f0961bf8114689e0a891be71635, type: 2}
 --- !u!1 &140311221
 GameObject:
@@ -1953,6 +1949,7 @@ GameObject:
   - component: {fileID: 330585545}
   - component: {fileID: 330585544}
   - component: {fileID: 330585547}
+  - component: {fileID: 330585548}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2078,6 +2075,103 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!82 &330585548
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 330585543}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ed48ce772e9793c46ab7e6b1ec564e3c, type: 3}
+  m_Resource: {fileID: 8300000, guid: ed48ce772e9793c46ab7e6b1ec564e3c, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &339128182 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1634862204795693691, guid: 0a4df1c971f7c9343a0752ddeea295a7, type: 3}
@@ -2318,7 +2412,7 @@ GameObject:
   - component: {fileID: 414903778}
   m_Layer: 0
   m_Name: FinalWaveSpawner1stSet (2)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2351,8 +2445,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
 --- !u!1001 &427614071
 PrefabInstance:
@@ -2427,7 +2519,7 @@ GameObject:
   - component: {fileID: 443683613}
   m_Layer: 0
   m_Name: SecondWaveSpawner
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2441,7 +2533,7 @@ Transform:
   m_GameObject: {fileID: 443683611}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.0100002, y: 0, z: -28.31}
+  m_LocalPosition: {x: -3.14, y: 0, z: -28.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2460,7 +2552,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
 --- !u!1 &453657397
 GameObject:
@@ -2522,7 +2613,7 @@ GameObject:
   - component: {fileID: 463175352}
   m_Layer: 0
   m_Name: SecondWaveSpawner (5)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2536,7 +2627,7 @@ Transform:
   m_GameObject: {fileID: 463175350}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.7, y: 0.67, z: -0.4}
+  m_LocalPosition: {x: -16.96, y: 0.67, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2555,7 +2646,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
 --- !u!1001 &470465464
 PrefabInstance:
@@ -2993,7 +3083,7 @@ GameObject:
   - component: {fileID: 503454839}
   m_Layer: 0
   m_Name: FinalWaveSpawner1stSet (7)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3026,8 +3116,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 11400000, guid: 31605f0961bf8114689e0a891be71635, type: 2}
 --- !u!1001 &522078025
 PrefabInstance:
@@ -4480,7 +4568,7 @@ GameObject:
   - component: {fileID: 820266915}
   m_Layer: 0
   m_Name: FirstWaveSpawners (4)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4745,7 +4833,7 @@ GameObject:
   - component: {fileID: 876036661}
   m_Layer: 0
   m_Name: FinalWaveSpawner1stSet (4)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4778,8 +4866,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 11400000, guid: 31605f0961bf8114689e0a891be71635, type: 2}
 --- !u!1001 &897627066
 PrefabInstance:
@@ -5118,7 +5204,7 @@ GameObject:
   - component: {fileID: 973369651}
   m_Layer: 0
   m_Name: FirstWaveSpawners (5)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5164,7 +5250,7 @@ GameObject:
   - component: {fileID: 978846070}
   m_Layer: 0
   m_Name: FinalWaveSpawner1stSet (3)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5197,8 +5283,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
 --- !u!1001 &1000682162
 PrefabInstance:
@@ -5794,7 +5878,7 @@ GameObject:
   - component: {fileID: 1114667626}
   m_Layer: 0
   m_Name: SecondWaveSpawner (6)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5808,7 +5892,7 @@ Transform:
   m_GameObject: {fileID: 1114667624}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.6800003, y: 0.383, z: -0.1800003}
+  m_LocalPosition: {x: -8, y: 0.383, z: 0.38}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5827,7 +5911,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
 --- !u!4 &1125976148 stripped
 Transform:
@@ -5908,7 +5991,7 @@ GameObject:
   - component: {fileID: 1151370825}
   m_Layer: 0
   m_Name: SecondWaveSpawner (2)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5922,7 +6005,7 @@ Transform:
   m_GameObject: {fileID: 1151370823}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7399998, y: 0, z: -18.41}
+  m_LocalPosition: {x: -3.7, y: 0, z: -18.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5941,7 +6024,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
 --- !u!1001 &1161809820
 PrefabInstance:
@@ -6941,7 +7023,7 @@ GameObject:
   - component: {fileID: 1334506767}
   m_Layer: 0
   m_Name: FirstWaveSpawners (6)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7185,7 +7267,7 @@ GameObject:
   - component: {fileID: 1391725365}
   m_Layer: 0
   m_Name: SecondWaveSpawner (7)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7199,7 +7281,7 @@ Transform:
   m_GameObject: {fileID: 1391725363}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.42, z: 0}
+  m_LocalPosition: {x: -0.56, y: 1.02, z: 0.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7218,7 +7300,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
 --- !u!1001 &1413641090
 PrefabInstance:
@@ -8420,7 +8501,7 @@ GameObject:
   - component: {fileID: 1636784550}
   m_Layer: 0
   m_Name: FirstWaveSpawners (2)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8880,7 +8961,7 @@ GameObject:
   - component: {fileID: 1741151936}
   m_Layer: 0
   m_Name: FinalWaveSpawner1stSet
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8913,8 +8994,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
 --- !u!4 &1756728445 stripped
 Transform:
@@ -8994,7 +9073,7 @@ GameObject:
   - component: {fileID: 1777287020}
   m_Layer: 0
   m_Name: FinalWaveSpawner1stSet (1)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9027,8 +9106,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
 --- !u!1 &1792059552
 GameObject:
@@ -9042,7 +9119,7 @@ GameObject:
   - component: {fileID: 1792059554}
   m_Layer: 0
   m_Name: FirstWaveSpawners
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9605,7 +9682,7 @@ GameObject:
   - component: {fileID: 1998405632}
   m_Layer: 0
   m_Name: SecondWaveSpawner (4)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9619,7 +9696,7 @@ Transform:
   m_GameObject: {fileID: 1998405630}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5500002, y: 0, z: -5.209999}
+  m_LocalPosition: {x: -3.7, y: 0, z: -6.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9638,7 +9715,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
 --- !u!4 &2002675753 stripped
 Transform:
@@ -9851,7 +9927,7 @@ GameObject:
   - component: {fileID: 2023436639}
   m_Layer: 0
   m_Name: FirstWaveSpawners (1)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10020,7 +10096,7 @@ GameObject:
   - component: {fileID: 2033576212}
   m_Layer: 0
   m_Name: FirstWaveSpawners (3)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10066,7 +10142,7 @@ GameObject:
   - component: {fileID: 2048592758}
   m_Layer: 0
   m_Name: FinalWaveSpawner1stSet (6)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10099,8 +10175,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 11400000, guid: 31605f0961bf8114689e0a891be71635, type: 2}
 --- !u!1001 &2076877715
 PrefabInstance:
