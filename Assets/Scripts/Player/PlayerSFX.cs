@@ -15,7 +15,7 @@ public class PlayerSFX : MonoBehaviour
     void Awake()
     {
         levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
-        playerStates = GetComponent<PlayerStates>();
+        playerStates = GameObject.Find("Player").GetComponent<PlayerStates>();
     }
 
     void Start()
@@ -45,13 +45,6 @@ public class PlayerSFX : MonoBehaviour
         }
     }
 
-    private void PlayDeathSound()
-    {
-        if (levelManager.IsLevelActive)
-        {
-            audioSource.PlayOneShot(deathSoundFX);
-        }
-    }
     private void PlayTakeDamageSound()
     {
         if (levelManager.IsLevelActive)
@@ -59,6 +52,11 @@ public class PlayerSFX : MonoBehaviour
             audioSource.PlayOneShot(takeDamageSoundFX);
 
         }
+    }
+
+    private void PlayDeathSound()
+    {
+        audioSource.PlayOneShot(deathSoundFX);
     }
 
 }
