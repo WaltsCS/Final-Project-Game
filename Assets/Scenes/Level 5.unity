@@ -223,7 +223,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: 04272a8ba349a2048b896af648bbd8d3, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!4 &39716618
 Transform:
   m_ObjectHideFlags: 0
@@ -531,7 +530,6 @@ MonoBehaviour:
   waves:
   - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!1001 &86772111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -636,7 +634,6 @@ MonoBehaviour:
   waves:
   - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!1 &92072019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,7 +1017,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: 31605f0961bf8114689e0a891be71635, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!1 &140311221
 GameObject:
   m_ObjectHideFlags: 0
@@ -2314,7 +2310,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!1001 &427614071
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2423,7 +2418,6 @@ MonoBehaviour:
   waves:
   - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!1 &453657397
 GameObject:
   m_ObjectHideFlags: 0
@@ -2519,7 +2513,6 @@ MonoBehaviour:
   waves:
   - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!1001 &470465464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2992,7 +2985,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: 31605f0961bf8114689e0a891be71635, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!1001 &522078025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4270,7 +4262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 104428487}
-  timeLimit: 300
+  timeLimit: 120
 --- !u!4 &788843658
 Transform:
   m_ObjectHideFlags: 0
@@ -4477,7 +4469,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!1 &831627944
 GameObject:
   m_ObjectHideFlags: 0
@@ -4745,7 +4736,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: 31605f0961bf8114689e0a891be71635, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!1001 &897627066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5117,7 +5107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!1 &978846068
 GameObject:
   m_ObjectHideFlags: 0
@@ -5166,7 +5155,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!1001 &1000682162
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5778,7 +5766,6 @@ MonoBehaviour:
   waves:
   - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!4 &1125976148 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2129564921876985215, guid: ba01d9f890df7c24db50f8ac0e42cf64, type: 3}
@@ -5893,7 +5880,6 @@ MonoBehaviour:
   waves:
   - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!1001 &1161809820
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6926,7 +6912,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!1001 &1356733199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7172,7 +7157,6 @@ MonoBehaviour:
   waves:
   - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!1001 &1413641090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8407,7 +8391,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!4 &1646532122 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1634862204795693691, guid: 0a4df1c971f7c9343a0752ddeea295a7, type: 3}
@@ -8706,7 +8689,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!4 &1724506482
 Transform:
   m_ObjectHideFlags: 0
@@ -8871,7 +8853,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!4 &1756728445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2129564921876985215, guid: ba01d9f890df7c24db50f8ac0e42cf64, type: 3}
@@ -8986,7 +8967,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!1 &1792059552
 GameObject:
   m_ObjectHideFlags: 0
@@ -9033,7 +9013,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!4 &1810791796 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1634862204795693691, guid: 0a4df1c971f7c9343a0752ddeea295a7, type: 3}
@@ -9598,7 +9577,6 @@ MonoBehaviour:
   waves:
   - {fileID: 0}
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!4 &2002675753 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1634862204795693691, guid: 0a4df1c971f7c9343a0752ddeea295a7, type: 3}
@@ -9699,7 +9677,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!1 &2027268388
 GameObject:
   m_ObjectHideFlags: 0
@@ -9869,7 +9846,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!1 &2048592756
 GameObject:
   m_ObjectHideFlags: 0
@@ -9918,7 +9894,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 11400000, guid: 31605f0961bf8114689e0a891be71635, type: 2}
-  minibossWave: {fileID: 0}
 --- !u!1001 &2076877715
 PrefabInstance:
   m_ObjectHideFlags: 0
