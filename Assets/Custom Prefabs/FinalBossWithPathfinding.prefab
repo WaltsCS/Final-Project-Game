@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6898008263336121378}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ShootPointsRoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 1934412734389913720}
   - component: {fileID: 1812505978555020229}
   - component: {fileID: 4925762872685075847}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8882924222444935332}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shootPointSouthWest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,7 +187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3290210034312937925}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shootPointWest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2330491779876585946}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shootPointNorthEast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1593717140728157796}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shootPointSouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 218998606687582356}
   - component: {fileID: 4241431123744196511}
   - component: {fileID: 3909211434811548340}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FinalBossWithPathfinding
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -370,7 +370,7 @@ GameObject:
   - component: {fileID: 5439808596772518672}
   - component: {fileID: 9116428255108997017}
   - component: {fileID: 5617698026325542210}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FinalBoss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -496,7 +496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8246431990523273384}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shootPointSouthEast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3445271410545936873}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shootPointEast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -558,7 +558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 180832186600829822}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shootPointNorthWest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -589,7 +589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2570062521506400428}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: shootPointNorth
   m_TagString: Untagged
   m_Icon: {fileID: 0}

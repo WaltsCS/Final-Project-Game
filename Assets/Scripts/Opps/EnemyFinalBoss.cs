@@ -172,5 +172,6 @@ public class EnemyFinalBoss : MonoBehaviour
         Debug.Log("Boss defeated!");
         yield return new WaitForSeconds(2f);
         Destroy(gameObject);
+
     }
 }

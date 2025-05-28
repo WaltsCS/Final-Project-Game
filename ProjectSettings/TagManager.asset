@@ -21,6 +21,7 @@ TagManager:
   - SecondGateKey
   - OutOfBounds
   - WaveSpawner
+  - FinalBoss
   layers:
   - Default
   - TransparentFX
