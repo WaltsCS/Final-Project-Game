@@ -2713,6 +2713,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
+  minibossWave: {fileID: 0}
 --- !u!4 &764721846
 Transform:
   m_ObjectHideFlags: 0
@@ -3349,6 +3350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
+  minibossWave: {fileID: 0}
 --- !u!4 &1057188321
 Transform:
   m_ObjectHideFlags: 0
@@ -3903,6 +3905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
+  minibossWave: {fileID: 0}
 --- !u!4 &1280514016
 Transform:
   m_ObjectHideFlags: 0
@@ -4175,6 +4178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
+  minibossWave: {fileID: 0}
 --- !u!4 &1348303514
 Transform:
   m_ObjectHideFlags: 0
@@ -4221,6 +4225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
+  minibossWave: {fileID: 0}
 --- !u!4 &1384589583
 Transform:
   m_ObjectHideFlags: 0
@@ -4663,7 +4668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 0}
-  - {fileID: 11400000, guid: 04272a8ba349a2048b896af648bbd8d3, type: 2}
+  minibossWave: {fileID: 11400000, guid: 04272a8ba349a2048b896af648bbd8d3, type: 2}
 --- !u!4 &1542883558
 Transform:
   m_ObjectHideFlags: 0
@@ -5353,6 +5358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - {fileID: 11400000, guid: e9de328cc6093144bb61fa904cc1d5d2, type: 2}
+  minibossWave: {fileID: 0}
 --- !u!4 &1854902604
 Transform:
   m_ObjectHideFlags: 0

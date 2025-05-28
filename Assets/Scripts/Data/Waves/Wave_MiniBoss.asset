@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Wave_MiniBoss
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 0}
   - {fileID: 7367769260169965889, guid: d3aefd70c6105894ba136d05fa0f519d, type: 3}
   count: 1
   spawnInterval: 30
