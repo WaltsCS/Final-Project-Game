@@ -6563,22 +6563,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2276fa4c553484d499eda7a20aaf8814, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstBatch:
-  - {fileID: 1924549320}
-  - {fileID: 1704558064}
-  - {fileID: 1794447177}
-  - {fileID: 1497125803}
-  - {fileID: 362824473}
-  - {fileID: 134282350}
-  - {fileID: 517322225}
-  - {fileID: 1539502677}
-  - {fileID: 749085543}
-  - {fileID: 1569290575}
-  secondBatch:
-  - {fileID: 1159732819}
-  - {fileID: 367808482}
-  - {fileID: 1151774471}
-  miniBossSpawner: {fileID: 1241609339}
+  waveBatches:
+  - spawners:
+    - {fileID: 1924549320}
+    - {fileID: 1704558064}
+    - {fileID: 1794447177}
+    - {fileID: 1497125803}
+    - {fileID: 362824473}
+    - {fileID: 134282350}
+    - {fileID: 517322225}
+    - {fileID: 1539502677}
+    - {fileID: 749085543}
+    - {fileID: 1569290575}
+  - spawners:
+    - {fileID: 1159732819}
+    - {fileID: 367808482}
+    - {fileID: 1151774471}
+    - {fileID: 1241609339}
+  miniBossSpawner: {fileID: 0}
   levelManager: {fileID: 686039962}
 --- !u!1 &894576856
 GameObject:

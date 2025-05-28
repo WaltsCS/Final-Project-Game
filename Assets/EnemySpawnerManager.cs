@@ -44,7 +44,7 @@ public class WaveBatchManager : MonoBehaviour
         if (miniBossSpawner != null)
         {
             miniBossSpawner.StartSpawning();
-            yield return new WaitUntil(() => GameObject.FindGameObjectsWithTag("Enemy").Length == 0);
+            yield return new WaitUntil(() => GameObject.FindGameObjectsWithTag("MiniBoss").Length == 0);
         }
 
         if (levelManager != null)
