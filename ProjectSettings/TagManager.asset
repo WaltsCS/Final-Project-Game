@@ -19,6 +19,7 @@ TagManager:
   - BossGateKey
   - FirstGateKey
   - SecondGateKey
+  - OutOfBounds
   layers:
   - Default
   - TransparentFX
