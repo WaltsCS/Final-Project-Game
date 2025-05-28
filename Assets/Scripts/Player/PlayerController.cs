@@ -60,10 +60,24 @@ public class PlayerController : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical Movement");
         float horizontalInput = Input.GetAxis("Horizontal Movement");
 
-        Vector3 moveDelta = (transform.forward * verticalInput + transform.right * horizontalInput)
-                              * movementSpeed * Time.fixedDeltaTime;
+        // Compute desired move direction and speed
+        Vector3 moveDir = (transform.forward * verticalInput + transform.right * horizontalInput).normalized;
+        Vector3 desiredVelocity = moveDir * movementSpeed;
 
-        rb.MovePosition(rb.position + moveDelta);
+        if (moveDir.sqrMagnitude > 0.01f)
+        {
+            // Check for obstacles ahead to prevent clipping through seams
+            float checkDistance = 0.5f;  // adjust to match player radius
+            RaycastHit hitInfo;
+            if (Physics.SphereCast(transform.position, 0.4f, moveDir, out hitInfo, checkDistance, LayerMask.GetMask("Default", "Wall")))
+            {
+                // If an obstacle is too close, cancel movement
+                desiredVelocity = Vector3.zero;
+            }
+        }
+
+        // Apply horizontal velocity; preserve vertical velocity (gravity etc.)
+        rb.linearVelocity = new Vector3(desiredVelocity.x, rb.  linearVelocity.y, desiredVelocity.z);
     }
 
     private void RotateTowardsMouse()
@@ -95,5 +109,22 @@ public class PlayerController : MonoBehaviour
         Instantiate(bulletPrefab,
                     bulletSpawnPoint.position,
                     bulletSpawnPoint.rotation);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // If colliding with walls/obstacles, project velocity away from penetration
+        ContactPoint contact = collision.GetContact(0);
+        Vector3 normal = contact.normal;
+        rb.linearVelocity = Vector3.ProjectOnPlane(rb.linearVelocity, normal);
+    }
+
+
+    private void OnCollisionStay(Collision collision)
+    {
+        // Continually correct velocity while in contact
+        ContactPoint contact = collision.GetContact(0);
+        Vector3 normal = contact.normal;
+        rb.linearVelocity = Vector3.ProjectOnPlane(rb.linearVelocity, normal);
     }
 }
