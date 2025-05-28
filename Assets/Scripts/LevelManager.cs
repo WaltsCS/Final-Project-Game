@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -13,8 +14,11 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject restartButton;
     [SerializeField] private GameObject nextLevelButton;
 
-    // todo: set to false in the future
-    // level starts when player clicks play in game manager
+    [Header("Audio Clips")]
+    [SerializeField] private AudioClip victorySoundFX;
+
+    private AudioSource audioSource;
+
     private bool isLevelActive = true;
 
     public bool IsLevelActive
@@ -22,9 +26,9 @@ public class LevelManager : MonoBehaviour
         get { return isLevelActive; }
     }
 
-
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         StartCoroutine(CheckForLevelClear());
     }
 
@@ -41,7 +45,6 @@ public class LevelManager : MonoBehaviour
         if (isLevelActive)
         {
             DisplayLevelComplete();
-
         }
     }
 
@@ -51,9 +54,12 @@ public class LevelManager : MonoBehaviour
         levelCompleteText.gameObject.SetActive(true);
         nextLevelButton.gameObject.SetActive(true);
 
-        // Play victory sound
-         if (SFX.Instance != null)
-            SFX.Instance.PlayVictorySound();
+        PlayVictorySound();
+    }
+
+    private void PlayVictorySound()
+    {
+        audioSource.PlayOneShot(victorySoundFX);
     }
 
     public void LoadNextLevel()
@@ -73,10 +79,6 @@ public class LevelManager : MonoBehaviour
         isLevelActive = false;
         gameOverText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
-
-        // Play Death sound
-         if (SFX.Instance != null)
-            SFX.Instance.PlayDeathSound();
     }
 
     public void RestartGame()

@@ -38,22 +38,7 @@ public class PlayerTakeDamage : MonoBehaviour
         if (!levelManager.IsLevelActive) return;
 
         playerStates.HealthBars--;
-        if (SFX.Instance != null)
-            SFX.Instance.PlayDecrementLifeSound();
-        
-        Debug.Log($"Player took damage. Remaining health bars: {playerStates.HealthBars}");
-        
-        // Fixed: Use PlayPlayerDamageVFX instead of PlayEnemyDamageVFX
-        if (ParticleFX.Instance != null)
-        {
-            Debug.Log("Playing player damage VFX...");
-            ParticleFX.Instance.PlayPlayerDamageVFX(transform.position);
-        }
-        else
-        {
-            Debug.LogWarning("ParticleFX.Instance is null!");
-        }
-        
+
         if (playerStates.HealthBars <= 0)
         {
             // Play death VFX before destroying

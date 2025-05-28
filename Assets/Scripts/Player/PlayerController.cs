@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Apply horizontal velocity; preserve vertical velocity (gravity etc.)
-        rb.linearVelocity = new Vector3(desiredVelocity.x, rb.  linearVelocity.y, desiredVelocity.z);
+        rb.linearVelocity = new Vector3(desiredVelocity.x, rb.linearVelocity.y, desiredVelocity.z);
     }
 
     private void RotateTowardsMouse()
@@ -110,11 +110,6 @@ public class PlayerController : MonoBehaviour
         Instantiate(bulletPrefab,
                     bulletSpawnPoint.position,
                     bulletSpawnPoint.rotation);
-        
-        if (SFX.Instance != null)
-            SFX.Instance.PlayHitSound();
-
-
     }
 
     private void OnCollisionEnter(Collision collision)
