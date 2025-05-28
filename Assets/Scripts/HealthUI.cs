@@ -10,14 +10,15 @@ public class HealthUI : MonoBehaviour
     {
         playerStates.TakeDamage += UpdateHealthUI;
         playerStates.ReplenishHealth += UpdateHealthUI;
-        playerStates.Die += UpdateHealthUI;
+        playerStates.Die += EmptyHealthUI;
+
     }
 
     void OnDisable()
     {
         playerStates.TakeDamage -= UpdateHealthUI;
         playerStates.ReplenishHealth -= UpdateHealthUI;
-        playerStates.Die -= UpdateHealthUI;
+        playerStates.Die -= EmptyHealthUI;
     }
 
     void Start()
@@ -32,6 +33,14 @@ public class HealthUI : MonoBehaviour
         for (int i = 0; i < healthBars.Length; i++)
         {
             healthBars[i].enabled = i < currentHealth;
+        }
+    }
+
+    void EmptyHealthUI()
+    {
+        foreach (var bar in healthBars)
+        {
+            bar.enabled = false;
         }
     }
 }

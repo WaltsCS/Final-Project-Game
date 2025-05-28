@@ -50,6 +50,10 @@ public class LevelManager : MonoBehaviour
         isLevelActive = false;
         levelCompleteText.gameObject.SetActive(true);
         nextLevelButton.gameObject.SetActive(true);
+
+        // Play victory sound
+         if (SFX.Instance != null)
+            SFX.Instance.PlayVictorySound();
     }
 
     public void LoadNextLevel()
@@ -69,6 +73,10 @@ public class LevelManager : MonoBehaviour
         isLevelActive = false;
         gameOverText.gameObject.SetActive(true);
         restartButton.gameObject.SetActive(true);
+
+        // Play Death sound
+         if (SFX.Instance != null)
+            SFX.Instance.PlayDeathSound();
     }
 
     public void RestartGame()

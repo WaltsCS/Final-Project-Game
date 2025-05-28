@@ -110,6 +110,11 @@ public class PlayerController : MonoBehaviour
         Instantiate(bulletPrefab,
                     bulletSpawnPoint.position,
                     bulletSpawnPoint.rotation);
+        
+        if (SFX.Instance != null)
+            SFX.Instance.PlayHitSound();
+
+
     }
 
     private void OnCollisionEnter(Collision collision)
