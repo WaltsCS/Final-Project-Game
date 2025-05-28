@@ -93,6 +93,11 @@ public class EnemySeekerShooter : MonoBehaviour
         if (collision.gameObject.CompareTag("PlayerBullet"))
         {
             Destroy(collision.gameObject);
+
+            if (ParticleFX.Instance != null)
+        {
+            ParticleFX.Instance.PlayEnemyDeathVFX(transform.position);
+        }
             Destroy(gameObject);
         }
     }
