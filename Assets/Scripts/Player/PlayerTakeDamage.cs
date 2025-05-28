@@ -38,9 +38,6 @@ public class PlayerTakeDamage : MonoBehaviour
         if (!levelManager.IsLevelActive) return;
 
         playerStates.HealthBars--;
-        if (SFX.Instance != null)
-            SFX.Instance.PlayDecrementLifeSound();
-        Debug.Log($"Player took damage. Remaining health bars: {playerStates.HealthBars}");
 
         if (playerStates.HealthBars <= 0)
         {
