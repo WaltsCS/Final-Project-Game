@@ -8,7 +8,7 @@ public class PowerUpUI : MonoBehaviour
 
     private void Start()
     {
-        powerUpIcon.enabled = false; 
+        powerUpIcon.enabled = false;
     }
 
     public void ShowPowerUp(float duration)
@@ -18,8 +18,8 @@ public class PowerUpUI : MonoBehaviour
 
     private IEnumerator ShowPowerUpCoroutine(float duration)
     {
-        powerUpIcon.enabled = true;             
+        powerUpIcon.enabled = true;
         yield return new WaitForSeconds(duration);
-        powerUpIcon.enabled = false;          
+        powerUpIcon.enabled = false;
     }
 }

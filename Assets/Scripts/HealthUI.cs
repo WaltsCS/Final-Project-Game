@@ -17,7 +17,7 @@ public class HealthUI : MonoBehaviour
     {
         playerStates.TakeDamage -= UpdateHealthUI;
         playerStates.ReplenishHealth -= UpdateHealthUI;
-        playerStates.Die -= UpdateHealthUI; 
+        playerStates.Die -= UpdateHealthUI;
     }
 
     void Start()
