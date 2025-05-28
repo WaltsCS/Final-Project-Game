@@ -119,6 +119,79 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &16489429
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 16489431}
+  - component: {fileID: 16489430}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &16489430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16489429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2276fa4c553484d499eda7a20aaf8814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveBatches:
+  - spawners:
+    - {fileID: 1792059554}
+    - {fileID: 2023436639}
+    - {fileID: 1636784550}
+    - {fileID: 2033576212}
+    - {fileID: 820266915}
+    - {fileID: 973369651}
+    - {fileID: 1334506767}
+  - spawners:
+    - {fileID: 443683613}
+    - {fileID: 68042413}
+    - {fileID: 1151370825}
+    - {fileID: 88215487}
+    - {fileID: 1998405632}
+    - {fileID: 463175352}
+    - {fileID: 1114667626}
+    - {fileID: 1391725365}
+  - spawners:
+    - {fileID: 1741151936}
+    - {fileID: 1777287020}
+    - {fileID: 414903778}
+    - {fileID: 978846070}
+    - {fileID: 876036661}
+    - {fileID: 135210362}
+    - {fileID: 2048592758}
+    - {fileID: 503454839}
+  miniBossSpawner: {fileID: 39716617}
+  levelManager: {fileID: 686039963}
+--- !u!4 &16489431
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 16489429}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.479996, y: 1, z: -6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &39716616
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,9 +222,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 11400000, guid: 04272a8ba349a2048b896af648bbd8d3, type: 2}
   minibossWave: {fileID: 0}
 --- !u!4 &39716618
@@ -10078,6 +10148,7 @@ SceneRoots:
   - {fileID: 1489969622}
   - {fileID: 1544353513}
   - {fileID: 1317455388}
+  - {fileID: 16489431}
   - {fileID: 265869328}
   - {fileID: 493760660}
   - {fileID: 831627945}
