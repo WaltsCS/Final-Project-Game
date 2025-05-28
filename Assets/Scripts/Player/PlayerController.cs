@@ -71,8 +71,9 @@ public class PlayerController : MonoBehaviour
             RaycastHit hitInfo;
             if (Physics.SphereCast(transform.position, 0.4f, moveDir, out hitInfo, checkDistance, LayerMask.GetMask("Default", "Wall")))
             {
-                // If an obstacle is too close, cancel movement
-                desiredVelocity = Vector3.zero;
+                // Slow down when near obstacles
+                float slowFactor = 0.3f;  // reduce to 30% speed when near
+                desiredVelocity *= slowFactor;
             }
         }
 
