@@ -1099,6 +1099,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 359746876}
+  - component: {fileID: 359746877}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -1123,6 +1124,24 @@ Transform:
   - {fileID: 342649280}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &359746877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359746875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2276fa4c553484d499eda7a20aaf8814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveBatches:
+  - spawners:
+    - {fileID: 507643789}
+    - {fileID: 342649279}
+  miniBossSpawner: {fileID: 0}
+  levelManager: {fileID: 686039963}
 --- !u!1 &374147901
 GameObject:
   m_ObjectHideFlags: 0

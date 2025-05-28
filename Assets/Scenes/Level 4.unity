@@ -941,7 +941,7 @@ GameObject:
   - component: {fileID: 134282350}
   m_Layer: 0
   m_Name: WaveSpawner (5)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2904,7 +2904,7 @@ GameObject:
   - component: {fileID: 362824473}
   m_Layer: 0
   m_Name: WaveSpawner (4)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3028,7 +3028,7 @@ GameObject:
   - component: {fileID: 367808482}
   m_Layer: 0
   m_Name: WaveSpawner (11)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4327,7 +4327,7 @@ GameObject:
   - component: {fileID: 517322225}
   m_Layer: 0
   m_Name: WaveSpawner (6)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5928,7 +5928,7 @@ GameObject:
   - component: {fileID: 749085543}
   m_Layer: 0
   m_Name: WaveSpawner (8)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6514,6 +6514,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 892067205}
+  - component: {fileID: 892067206}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -6550,6 +6551,37 @@ Transform:
   - {fileID: 1151774472}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &892067206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 892067204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2276fa4c553484d499eda7a20aaf8814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveBatches:
+  - spawners:
+    - {fileID: 1924549320}
+    - {fileID: 1704558064}
+    - {fileID: 1794447177}
+    - {fileID: 1497125803}
+    - {fileID: 362824473}
+    - {fileID: 134282350}
+    - {fileID: 517322225}
+    - {fileID: 1539502677}
+    - {fileID: 749085543}
+    - {fileID: 1569290575}
+  - spawners:
+    - {fileID: 1159732819}
+    - {fileID: 367808482}
+    - {fileID: 1151774471}
+    - {fileID: 1241609339}
+  miniBossSpawner: {fileID: 0}
+  levelManager: {fileID: 686039962}
 --- !u!1 &894576856
 GameObject:
   m_ObjectHideFlags: 0
@@ -8618,7 +8650,7 @@ GameObject:
   - component: {fileID: 1151774471}
   m_Layer: 0
   m_Name: WaveSpawner (12)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8664,7 +8696,7 @@ GameObject:
   - component: {fileID: 1159732819}
   m_Layer: 0
   m_Name: WaveSpawner (10)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9272,7 +9304,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - {fileID: 0}
   - {fileID: 11400000, guid: 04272a8ba349a2048b896af648bbd8d3, type: 2}
 --- !u!4 &1241609340
 Transform:
@@ -10572,7 +10603,7 @@ GameObject:
   - component: {fileID: 1497125803}
   m_Layer: 0
   m_Name: WaveSpawner (3)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10961,7 +10992,7 @@ GameObject:
   - component: {fileID: 1539502677}
   m_Layer: 0
   m_Name: WaveSpawner (7)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11249,7 +11280,7 @@ GameObject:
   - component: {fileID: 1569290575}
   m_Layer: 0
   m_Name: WaveSpawner (9)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12492,7 +12523,7 @@ GameObject:
   - component: {fileID: 1704558064}
   m_Layer: 0
   m_Name: WaveSpawner (1)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13042,7 +13073,7 @@ GameObject:
   - component: {fileID: 1794447177}
   m_Layer: 0
   m_Name: WaveSpawner (2)
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14003,7 +14034,7 @@ GameObject:
   - component: {fileID: 1924549320}
   m_Layer: 0
   m_Name: WaveSpawner
-  m_TagString: Untagged
+  m_TagString: WaveSpawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
