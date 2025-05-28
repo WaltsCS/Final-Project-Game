@@ -4,11 +4,13 @@ public class PlayerTakeDamage : MonoBehaviour
 {
     private PlayerStates playerStates;
     private LevelManager levelManager;
+    private TimeManager timeManager;
 
     private void Awake()
     {
         playerStates = GetComponent<PlayerStates>();
         levelManager = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+        timeManager = GameObject.Find("TimeManager").GetComponent<TimeManager>();
     }
 
     private void OnEnable()
@@ -47,6 +49,7 @@ public class PlayerTakeDamage : MonoBehaviour
     private void Die()
     {
         Destroy(this.gameObject);
+        timeManager.StopTimer();
         levelManager.DisplayGameOver();
     }
 }
