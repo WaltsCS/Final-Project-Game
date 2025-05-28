@@ -5071,7 +5071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00a9b19b8548c102f815adce5b10c620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootSoundFX: {fileID: 8300000, guid: bd27a905dc3933a43a39b91285892e55, type: 3}
+  shootSoundFX: {fileID: 8300000, guid: 8e9c5d0bbcf8af54093e2029271a14b3, type: 3}
   deathSoundFX: {fileID: 8300000, guid: 7909dc8f8f7cc4c4ab348bc5db3872fa, type: 3}
   takeDamageSoundFX: {fileID: 8300000, guid: 4e1e267de14d6ed458e824672f38a1ce, type: 3}
 --- !u!82 &1537709927
