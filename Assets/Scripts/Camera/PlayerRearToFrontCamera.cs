@@ -14,6 +14,7 @@ public class PlayerRearToFrontCamera : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (player == null) return;
         Vector3 targetPosition = player.position + player.transform.rotation * offset;      //ENSURES fixed camera even w/ rotation
         //linear interpolation; move following camera to new position smoothly
         transform.position = Vector3.Lerp(transform.position, targetPosition, Time.deltaTime * followSpeed);

@@ -19,4 +19,4 @@ MonoBehaviour:
   - {fileID: 8648902085773784809, guid: f5bd20bbe4768e64ab53ebe2c9cd7618, type: 3}
   - {fileID: 8648902085773784809, guid: f5bd20bbe4768e64ab53ebe2c9cd7618, type: 3}
   count: 5
-  spawnInterval: 5
+  spawnInterval: 1
