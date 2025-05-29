@@ -3831,7 +3831,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612179956}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf07c7b5945707044b696065838ec91b, type: 3}
   m_Name: 
@@ -5937,7 +5937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5617698026325542210, guid: dc8930c487e63b44cb52ef8764d2c9e0, type: 3}
       propertyPath: maxHealth
-      value: 24
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5617698026325542210, guid: dc8930c487e63b44cb52ef8764d2c9e0, type: 3}
       propertyPath: rotationSpeed
@@ -5949,7 +5949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5617698026325542210, guid: dc8930c487e63b44cb52ef8764d2c9e0, type: 3}
       propertyPath: phaseTransition1
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6123527097752391098, guid: dc8930c487e63b44cb52ef8764d2c9e0, type: 3}
       propertyPath: m_Name

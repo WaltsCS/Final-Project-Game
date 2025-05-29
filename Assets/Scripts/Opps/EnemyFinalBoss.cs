@@ -130,7 +130,7 @@ public class EnemyFinalBoss : MonoBehaviour
                 FireAll();
                 break;
             case Phase.Phase2:
-                // Fire mines sometimes
+                // Fire mines sometimes (Now Just Rotates faster)
                 if (Random.value < 0.3f)
                     rotationSpeed += 30;
                 break;
