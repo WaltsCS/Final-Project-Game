@@ -39,7 +39,9 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         // Wait until there are no more enemies in the scene
-        while (GameObject.FindGameObjectsWithTag("Enemy").Length > 0)
+        while (GameObject.FindGameObjectsWithTag("Enemy").Length > 0
+        || GameObject.FindGameObjectsWithTag("FinalBoss").Length > 0
+        || GameObject.FindGameObjectsWithTag("MiniBoss").Length > 0)
             yield return null;
 
         if (isLevelActive)
@@ -48,7 +50,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private void DisplayLevelComplete()
+    public void DisplayLevelComplete()
     {
         isLevelActive = false;
         levelCompleteText.gameObject.SetActive(true);

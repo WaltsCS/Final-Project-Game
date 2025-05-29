@@ -22,6 +22,7 @@ TagManager:
   - OutOfBounds
   - WaveSpawner
   - FinalBoss
+  - MiniBoss
   layers:
   - Default
   - TransparentFX

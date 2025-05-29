@@ -132,8 +132,7 @@ public class EnemyFinalBoss : MonoBehaviour
             case Phase.Phase2:
                 // Fire mines sometimes
                 if (Random.value < 0.3f)
-                    SpawnMine();
-                FireAll();
+                    rotationSpeed += 30;
                 break;
         }
     }
@@ -156,22 +155,23 @@ public class EnemyFinalBoss : MonoBehaviour
         }
     }
 
-    void SpawnMine()
-    {
-        var mine = ObjectPooler.Instance.GetFromPool("Mine", transform.position, Quaternion.identity);
-        var player = GameObject.FindWithTag("Player");
-        if (mine != null && player != null)
-            mine.GetComponent<HomingMine>().Init(player.transform);
-        else
-            Debug.LogError("Failed to spawn mine or find Player tag.");
-    }
+    // void SpawnMine()
+    // {
+    //     var mine = ObjectPooler.Instance.GetFromPool("EnemyBullet", transform.position, Quaternion.identity);
+    //     var player = GameObject.FindWithTag("Player");
+    //     if (mine != null && player != null)
+    //         mine.GetComponent<HomingMine>().Init(player.transform);
+    //     else
+    //         Debug.LogError("Failed to spawn mine or find Player tag.");
+    // }
 
     IEnumerator Die()
     {
         // Play death animation, VFX, etc.
         Debug.Log("Boss defeated!");
         yield return new WaitForSeconds(2f);
-        Destroy(gameObject);
+        // Destroy the entire FinalBoss prefab root
+        Destroy(transform.root.gameObject);
 
     }
 }
