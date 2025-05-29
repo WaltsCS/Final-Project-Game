@@ -84,6 +84,6 @@ public class LevelManager : MonoBehaviour
     public void RestartGame()
     {
         // Restart to the first scene
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
