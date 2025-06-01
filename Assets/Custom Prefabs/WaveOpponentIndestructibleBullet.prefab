@@ -327,6 +327,9 @@ MonoBehaviour:
   projectileSpeed: 10
   shootInterval: 1
   shootPoint: {fileID: 2967891984739395255}
-  obstacleTag: Obstacle
-  avoidanceStrength: 5
-  avoidanceRayDistance: 2
+  obstacleTags:
+  - Wall
+  - EnemyBullet
+  slowFactor: 0.3
+  checkDistance: 0.5
+  sphereRadius: 0.2

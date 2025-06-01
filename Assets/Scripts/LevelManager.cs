@@ -53,8 +53,13 @@ public class LevelManager : MonoBehaviour
     public void DisplayLevelComplete()
     {
         isLevelActive = false;
-        levelCompleteText.gameObject.SetActive(true);
-        nextLevelButton.gameObject.SetActive(true);
+        
+        // Only activate levelCompleteText if it’s been assigned in the Inspector
+        if (levelCompleteText != null)
+            levelCompleteText.gameObject.SetActive(true);
+        // Only activate nextLevelButton if it’s been assigned
+        if (nextLevelButton != null)
+            nextLevelButton.SetActive(true);
 
         PlayVictorySound();
     }
@@ -79,8 +84,11 @@ public class LevelManager : MonoBehaviour
     public void DisplayGameOver()
     {
         isLevelActive = false;
-        gameOverText.gameObject.SetActive(true);
-        restartButton.gameObject.SetActive(true);
+        if (gameOverText != null)
+            gameOverText.gameObject.SetActive(true);
+
+        if (restartButton != null)
+            restartButton.SetActive(true);
     }
 
     public void RestartGame()
