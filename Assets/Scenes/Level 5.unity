@@ -5496,7 +5496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5617698026325542210, guid: dc8930c487e63b44cb52ef8764d2c9e0, type: 3}
       propertyPath: shootInterval
-      value: 0.45
+      value: 0.47
       objectReference: {fileID: 0}
     - target: {fileID: 5617698026325542210, guid: dc8930c487e63b44cb52ef8764d2c9e0, type: 3}
       propertyPath: phaseTransition1
